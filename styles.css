@@ -29,7 +29,7 @@ body::-webkit-scrollbar-thumb {
    justify-content: center;
    position: relative;
    align-items: center;
-   background-image: url("img/Winter62.jpg");
+   background-image: url("img/bg.jpg");
    background-size: cover;
    z-index: 0;
 }
@@ -93,7 +93,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .descripcion p {
-    font-size: 20px;
+    
+    font-size: 40px;
     width: 50%;
     text-align: center;
 }
