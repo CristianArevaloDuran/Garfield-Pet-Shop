@@ -1,5 +1,5 @@
 # Garfield-Pet-Shop
-Proyecto 
+Proyecto Pet Shop
 
 --Añadir proyecto Visual Studio--
 
