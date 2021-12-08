@@ -1,0 +1,198 @@
+@import url(../styles/root.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-bloque {
+    min-width: 50%;
+    width: 50%;
+    box-shadow: 4px 4px 4px var(--color-1);
+    background-color: var(--color-4);
+    border-radius: 20px;
+    padding: 50px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente);
+}
+
+.login-bloque .flecha {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.login-bloque .flecha a svg {
+    stroke: #111;
+    width: 50px;
+    transition: .25s ease;
+}
+
+.login-bloque .flecha a:hover > svg {
+    transform: rotate(20deg);
+}
+
+.login-bloque .logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.login-bloque .logo img {
+    width: 50px;
+    border-radius: 15px;
+}
+
+.login-bloque .formulario {
+    margin-top: 40px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-bloque .formulario h1 {
+    font-size: 40px;
+}
+
+.login-bloque .formulario form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.login-bloque .formulario form .identificacion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-bloque .formulario form .identificacion label, .login-bloque .formulario form .pass label{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.login-bloque .formulario form .identificacion input {
+    width: 100%;
+    padding: 15px 25px;
+    font-family: var(--fuente);
+    font-size: 15px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    letter-spacing: 5px;
+    transition: .25s ease;
+}
+
+.login-bloque .formulario form .identificacion input:focus {
+    outline: 4px solid var(--color-1);
+}
+
+.login-bloque .formulario form .identificacion input::-webkit-inner-spin-button, .login-bloque .formulario form .identificacion input::-webkit-outer-spin-button {
+    display: none;
+    margin: 0;
+}
+
+.login-bloque .formulario form .pass {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.login-bloque .formulario form .pass .pass-field {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.login-bloque .formulario form .pass .pass-field input {
+    width: 85%;
+    padding: 15px 25px;
+    font-family: var(--fuente);
+    font-size: 15px;
+    outline: none;
+    border-radius: 20px 0 0 20px;
+    border: none;
+    letter-spacing: 5px;
+    transition: .25s ease;
+}
+
+.login-bloque .formulario form .pass .pass-field input:focus, .login-bloque .formulario form .pass .pass-field input:focus ~ .eye {
+    outline: 4px solid var(--color-1);
+}
+
+
+
+.login-bloque .formulario form .pass .pass-field .eye {
+    background-color: var(--color-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 20px 20px 0;
+    min-width: 15%;
+    transition: .25s ease;
+}
+
+.login-bloque .formulario form .pass .pass-field .eye button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.login-bloque .formulario form .pass .pass-field .eye svg {
+    stroke: var(--color-icon);
+    width: 40px;
+    transform: translateX(-2px) rotate(40deg);
+    transition: .25s ease;
+}
+
+.login-bloque .formulario form .pass .pass-field .eye .svgEyeLash {
+    display: none;
+}
+
+.rotate-svg {
+    transform: rotate(0deg) !important;
+}
+
+.login-bloque .formulario form .pass .pass-field input::-ms-reveal {
+    display: none;
+}
+
+.login-bloque .formulario form .submit input {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--fuente);
+    font-size: 18px;
+    background-color: var(--color-1);
+    color: var(--color-icon);
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.login-bloque .formulario form .submit input:hover {
+    box-shadow: 2px 2px var(--color-2);
+    transform: translate(-2px, -2px);
+    text-shadow: 1px 1px 2px var(--color-4);
+}
