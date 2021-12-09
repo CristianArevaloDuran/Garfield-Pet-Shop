@@ -20,6 +20,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50px;
 }
 
+body {
+    position: relative;
+}
+
 .contenedor {
    font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
    width: 100%;
@@ -44,6 +48,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
     top: 0;
     right: 0;
+    z-index: 10;
     box-shadow: 5px 5px #9FC5DE;
     transition: background-color .25s ease;
 }
@@ -71,6 +76,19 @@ body::-webkit-scrollbar-thumb {
 .contenido h1 {
     margin-top: 15px;
     color: #111;
+}
+
+.parallax-img {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+.parallax-img img {
+    width: 100%;
+    z-index: 5;
 }
 
 .separador {
