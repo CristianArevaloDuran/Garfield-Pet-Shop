@@ -1,0 +1,89 @@
+@import url("../styles/root.css");
+
+.profile-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 50;
+    background-color: var(--blur-color);
+    backdrop-filter: blur(3px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-modal .modal-content {
+    min-width: 50%;
+    width: 50%;
+    max-width: 80%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-4);
+    transition: .25s ease;
+}
+
+.profile-modal .modal-content .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.profile-modal .modal-content .logo img {
+    width: 50px;
+    border-radius: 15px;
+}
+
+.profile-modal .modal-content .icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: var(--color-icon);
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .25s ease;
+}
+
+.profile-modal .modal-content .icon:hover {
+    background-color: #ccc;
+    transform: translate(-1px, -1px);
+    box-shadow: 2px 2px var(--color-1);
+}
+
+.profile-modal .modal-content .icon svg {
+    stroke: #111;
+    width: 30px;
+    transition: transform .25s ease;
+}
+
+.profile-modal .modal-content .icon:hover > svg{
+    transform: rotate(90deg);
+}
+
+.profile-modal .modal-content .titulo {
+    margin-top: 80px;
+    font-family: var(--fuente);
+}
+
+.profile-modal .modal-content .pass-confirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-modal .modal-content .pass-confirm .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

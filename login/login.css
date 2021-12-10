@@ -24,13 +24,13 @@
 
 .login-bloque .flecha {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
 }
 
 .login-bloque .flecha a svg {
     stroke: #111;
-    width: 40px;
+    width: 30px;
     transition: .25s ease;
 }
 
