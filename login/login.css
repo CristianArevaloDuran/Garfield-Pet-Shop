@@ -1,9 +1,4 @@
 @import url(../styles/root.css);
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .contenedor {
     width: 100%;
@@ -35,7 +30,7 @@
 
 .login-bloque .flecha a svg {
     stroke: #111;
-    width: 50px;
+    width: 40px;
     transition: .25s ease;
 }
 
@@ -162,8 +157,13 @@
 .login-bloque .formulario form .pass .pass-field .eye svg {
     stroke: var(--color-icon);
     width: 40px;
-    transform: translateX(-2px) rotate(40deg);
+    transform: rotate(40deg);
     transition: .25s ease;
+}
+
+.login-bloque .formulario form .pass .pass-field .eye svg path, .login-bloque .formulario form .pass .pass-field .eye .svgEyeLash svg path {
+    fill: var(--color-icon);
+    width: 100%;
 }
 
 .login-bloque .formulario form .pass .pass-field .eye .svgEyeLash {

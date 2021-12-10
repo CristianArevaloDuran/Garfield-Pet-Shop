@@ -3,6 +3,12 @@
     src: url("../fuente/Poppins-Regular.ttf");
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --color-1: #9DA3EB;
     --color-2: #A4BFF5;
