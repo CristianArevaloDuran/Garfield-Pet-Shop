@@ -1,4 +1,4 @@
-@import url(../styles/root.css);
+@import url(../../styles/root.css);
 
 body {
     height: 100vh;
@@ -10,9 +10,15 @@ body {
     width: 100px;
     height: 100vh;
     z-index: 10;
+    left: 0;
     position: fixed;
     background-color: var(--color-1);
     box-shadow: 5px 0 var(--color-2);
+    transition: left .5s ease;
+}
+
+.min-sidebar-close {
+    left: -100px;
 }
 
 .min-sidebar .open-sidebar {
@@ -31,7 +37,7 @@ body {
 
 .min-sidebar .open-sidebar:hover {
     background-color: #ccc;
-    transform: translate(-1px, -1px);
+    transform: translate(-2px, -2px);
     box-shadow: 2px 2px var(--color-5);
 }
 
@@ -72,7 +78,7 @@ body {
 
 .min-sidebar .user-profile .user-data:hover{
     background-color: #ccc;
-    transform: translate(-1px, -1px);
+    transform: translate(-2px, -2px);
     box-shadow: 2px 2px var(--color-5);
 }
 
@@ -104,18 +110,19 @@ body {
     transition: .25s ease;
 }
 
-.min-sidebar .modules-buttons .button:last-of-type {
-    margin-bottom: 0;
-}
-
-.min-sidebar .modules-buttons .button:last-of-type > svg {
-    transform: rotate(180deg);
-}
-
 .min-sidebar .modules-buttons .button:hover {
     background-color: #ccc;
-    transform: translate(-1px, -1px);
+    transform: translate(-2px, -2px);
     box-shadow: 2px 2px var(--color-5);
+}
+
+.min-sidebar .modules-buttons .logout {
+    color: #000;
+    text-decoration: none;
+}
+
+.min-sidebar .modules-buttons .logout svg {
+    transform: rotate(-180deg);
 }
 
 .min-sidebar .sidebar-footer {
