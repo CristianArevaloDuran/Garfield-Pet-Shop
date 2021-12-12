@@ -1,0 +1,52 @@
+@import url("../../styles/root.css");
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content {
+    min-width: 50%;
+    width: 80%;
+    margin: 130px 0 0 100px;
+    max-width: 80%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--color-4);
+    transition: .25s ease;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 40%;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width:1400px) {
+    .iframe-container {
+        padding-top: 52%;
+    }
+}

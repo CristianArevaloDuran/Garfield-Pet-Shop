@@ -152,3 +152,10 @@ body {
     font-size: 10px;
     text-align: center;
 }
+
+
+@media screen and (max-width: 1400px) {
+    .min-sidebar .modules-buttons {
+        margin: 70px auto 0;
+    }
+}

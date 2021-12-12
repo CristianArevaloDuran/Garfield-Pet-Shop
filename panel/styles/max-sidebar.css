@@ -68,8 +68,10 @@
 }
 
 .max-sidebar .user-profile .user-img {
-    width: 250px;
-    height: 250px;
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 150px;
+    min-width: 150px;
     border-radius: 50%;
     border: 5px solid var(--color-icon);
     cursor: pointer;
@@ -110,12 +112,13 @@
 .max-sidebar .dropdowns {
     width: 100%;
     display: flex;
+    margin-top: 80px;
     flex-direction: column;
     align-items: center;
     padding: 5px 0;
     justify-content: flex-start;
     overflow-y: scroll;
-    max-height: 33%;
+    max-height: 40%;
 }
 
 .max-sidebar .dropdowns::-webkit-scrollbar {
@@ -306,4 +309,16 @@
 .max-sidebar .sidebar-footer p {
     font-family: var(--fuente);
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+    .max-sidebar .user-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .max-sidebar .dropdowns {
+        max-height: 30%;
+        margin-top: 10px;
+    }
 }

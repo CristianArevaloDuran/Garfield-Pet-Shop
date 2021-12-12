@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="styles/min-sidebar.css">    
     <link rel="stylesheet" href="styles/max-sidebar.css">
     <link rel="stylesheet" href="styles/min-buscador.css">    
-    <link rel="stylesheet" href="styles/max-buscador.css">    
+    <link rel="stylesheet" href="styles/max-buscador.css">
+    <link rel="stylesheet" href="styles/contentDisplay.css">    
     <title>Panel</title>
 </head>
 <body>
@@ -101,8 +102,8 @@
 
             <div class="dropdown-content">
                 <div class="content">
-                    <a href="" onclick="sidebarToggle()" target="">Propietarios</a>
-                    <a href="modules/clientes/" target="">Mascotas</a>
+                    <a href="modules/Modulo Propietario/ModuloPropietario.html" target="contenido"  onclick="sidebarToggle()">Propietarios</a>
+                    <a href="modules/Modulo Mascota/moduloMascota.html" target="contenido" onclick="sidebarToggle()">Mascotas</a>
                 </div>
             </div>
 
@@ -118,8 +119,8 @@
 
             <div class="dropdown-content">
                 <div class="content">
-                    <a href="modules/clientes/" target="">Propietarios</a>
-                    <a href="modules/clientes/" target="">Mascotas</a>
+                    <a href="modules/Modulo servicio/moduloservicio.html" onclick="sidebarToggle()" target="contenido">Lista de Servicios</a>
+                    <a href="" target="contenido" onclick="sidebarToggle()">Otra cosa</a>
                 </div>
             </div>
 
@@ -135,8 +136,8 @@
 
             <div class="dropdown-content">
                 <div class="content">
-                    <a href="modules/clientes/" target="">Propietarios</a>
-                    <a href="modules/clientes/" target="">Mascotas</a>
+                    <a href="modules/ModuloEmpleado/moduloempleado.html"  target="contenido" onclick="sidebarToggle()">Lista de empleados</a>
+                    <a href="" target="contenido" onclick="sidebarToggle()">Otra cosa</a>
                 </div>
             </div>
 
@@ -199,6 +200,18 @@
     </div>
 
     <!--...Max Buscador-->
+
+    <!--Content display...-->
+
+    <div class="container">
+        <div class="content">
+            <div class="iframe-container">
+                <iframe src="modules/welcome/welcome.html" frameborder="0" name="contenido"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!--...Content display-->
 
     <script src="scripts/expand.js"></script>
     <script src="scripts/expandSidebar.js"></script>
