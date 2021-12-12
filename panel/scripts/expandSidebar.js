@@ -6,6 +6,7 @@ const blurMaxSidebar = document.getElementById('blurMaxSidebar');
 
 openSidebar.addEventListener('click', sidebarToggle);
 closeSidebar.addEventListener('click', sidebarToggle);
+blurMaxSidebar.addEventListener('click', sidebarToggle);
 
 function sidebarToggle(event) {
     if(minSidebar.classList.contains('min-sidebar-close')) {

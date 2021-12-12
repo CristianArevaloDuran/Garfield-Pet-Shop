@@ -11,17 +11,18 @@ profileModalButton2.addEventListener("click", openModal);
 profileModalButton3.addEventListener("click", openModal);
 profileModalButton4.addEventListener("click", openModal);
 profileModalClose.addEventListener("click", closeModal);
+profileModal.addEventListener('click', closeModal);
 
 function openModal(event) {
     profileModal.style.display = "flex";
     setTimeout(()=>{
         profileModalContent.style.width = "70%";
-    }, 50);
+    }, 1);
 }
 
 function closeModal(event) {
     profileModalContent.style.width = "50%";   
     setTimeout(()=>{
         profileModal.style.display = "none";
-    }, 200);
+    }, 170);
 }

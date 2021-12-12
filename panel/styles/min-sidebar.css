@@ -41,6 +41,14 @@ body {
     box-shadow: 2px 2px var(--color-5);
 }
 
+.min-sidebar .open-sidebar svg {
+    transition: transform .35s ease;
+}
+
+.min-sidebar .open-sidebar:hover > svg {
+    transform: rotate(180deg);
+}
+
 .min-sidebar .user-profile {
     width: 100%;
     margin: 30px auto 0;
@@ -112,6 +120,12 @@ body {
 
 .min-sidebar .modules-buttons .button:hover {
     background-color: #ccc;
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px var(--color-5);
+}
+
+.button-active {
+    background-color: #ccc !important;
     transform: translate(-2px, -2px);
     box-shadow: 2px 2px var(--color-5);
 }
