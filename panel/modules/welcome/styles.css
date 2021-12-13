@@ -9,7 +9,7 @@ body {
     background-color: var(--color-4);
 }
 
-.container .content {
+.welcome-container .welcome-content {
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -19,19 +19,19 @@ body {
     background-color: var(--color-4);
 }
 
-.content img {
+.welcome-content img {
     border-radius: 50%;
     width: 20%;
     border: 5px solid var(--color-icon);
     height: 20%;
 }
 
-.content h2 {
+.welcome-content h2 {
     font-family: var(--fuente);
     margin-top: 20px;
 }
 
-.content p {
+.welcome-content p {
     width: 70%;
     font-family: var(--fuente);
     text-align: center;
