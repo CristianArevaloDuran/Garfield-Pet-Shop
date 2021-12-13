@@ -209,7 +209,7 @@
 .dropdown-content-active {
     overflow: visible !important;
     transform: translate(-3px, -3px);
-    box-shadow: 3px 0 var(--color-5);
+    box-shadow: 3px 3px var(--color-5), 3px 0 var(--color-5);
     background-color: #ccc;
     border-radius: 0 0 15px 15px !important;
 }
