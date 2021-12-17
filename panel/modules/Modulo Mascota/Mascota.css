@@ -32,21 +32,23 @@
     text-align: center;
 }
 .contenedor-mascota{
+    width: 66%;
     background:var(--segundario);
-    margin: 60px;
+    margin-left: 18%;
+    margin-top: 5%;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    
 }
 .mascota{
     background:var(--primario);
-    width: 100px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 140px;
     border-radius: 50%;
     margin: 30px;
     
@@ -64,15 +66,17 @@
     fill: var(--cuarto);
 }*/
 .info-mascota{
-    left: 15%;
+    left: 30%;
     position:absolute;
 }
 .texto{
     position: relative;
 }
+
 .barra-busqueda{
-    left: 70%;
-    width: 30%;
+    padding: 20px;
+    left: 80%;
+    width: 40%;
     display: flex;
     top:0; 
     margin-left: 50%;
@@ -82,9 +86,11 @@
     fill: white;
 }
 .busqueda svg{
+    padding:7px;
     background: var(--primario);
-    width: 44px;
+    width: 90%;
     height: 44px;
     align-items: center;
     margin: 10px; 
+    border-radius: 10px;
 }

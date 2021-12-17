@@ -11,15 +11,17 @@
 .container .dummy-sidebar {
     width: 100px;
     height: 100%;
+    background-color: var(--color-4);
 }
 
 .container .iframe-container {
     width: 100%;
     height: 100%;
-    
+    overflow: hidden;
 }
 
 .container .iframe-container iframe {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }

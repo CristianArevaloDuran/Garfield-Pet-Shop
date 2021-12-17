@@ -19,17 +19,16 @@
 .contenedor h1{
     text-align: center;
 }
-.icono-man{
-    width: 200px;
-    height: 200px;
+.icono-perro{
+    width: 165px;
+    height: 165px;
     margin: auto;
     background: var(--primario);
     border-radius: 50%;
     display: flex;
 }
 .logo{
-    top: 20px;
-    width: 120px;
+    width: 100px;
     margin: auto;
     align-items: center;
 }
@@ -38,27 +37,26 @@
     fill: var(--cuarto);
 }
 .contenedor-input{
-    width: 70%;
-    height: 120px;
-    margin: 80px auto ;
+    width: 80%;
+    height: 200px;
+    margin: 20px auto ;
     display: flex;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,1fr);
 }
 .input-label input{
     font-size: 18px;
-    width: 280px;
+    width: 200px;
     margin: auto;
     display: flex;
     height: 50px;
-    border-radius: 10px;
-    border: none; 
-    background: rgb(231, 228, 228); 
+    border-radius: 20px;
+    border: none;
 }
 .contenedor-input label{
-    font-size:20px;
-    margin: auto 5% ;
+    margin: auto 12%;
+    font-size: 17px;
 }
 
 button:hover{
@@ -69,22 +67,16 @@ button:hover{
     justify-content: center;
 }
 .boton input{
-    
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     border: none;
     width: 150px;
     background: var(--primario);
     font-size: 20px;
+    color: white;
 }
 .boton input:hover{
     border:0.5px solid var(--primario);
     background: var(--segundario);
 }
-.contenedor-secundario{
-    align-content: center;
-    justify-content: center;
-}
-.botones a{
-    text-decoration: none;
-}
+

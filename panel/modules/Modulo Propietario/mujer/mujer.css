@@ -19,16 +19,16 @@
 .contenedor h1{
     text-align: center;
 }
-.icono-servicio{
-    width: 300px;
-    height: 300px;
+.icono-man{
+    width: 165px;
+    height: 165px;
     margin: auto;
     background: var(--primario);
     border-radius: 50%;
     display: flex;
 }
 .logo{
-    width: 200px;
+    width: 50px;
     margin: auto;
     align-items: center;
 }
@@ -36,32 +36,26 @@
     stroke: var(--cuarto);
     fill: var(--cuarto);
 }
-.contenedor-servicio{
-    width: 85%;
-    height: 120px;
+.contenedor-informacion{
+    width: 70%;
+    height: 300px;
     margin: 20px auto ;
+    display: flex;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
 }
-.servicio{
+.informacion{
     display: flex;
     align-items: center;
     background: white;
-    width: 350px;
+    width: 300px;
     height: 50px;
     border-radius: 20px;
+    padding: 10px;
+    
 }
-.servicio svg{
-    display:flex;
-    align-items: center;
-    width: 36px;
-    height: 56px;
-    margin-left: 78%;
-    background: var(--primario);
-    border-radius: 0 30px 30px;
-}
-.informacion-servicio{
+.informacion-personal{
     margin-left: 20px;
 }
 .botones-principales{
@@ -72,26 +66,45 @@
     justify-content: center;
     align-items: center;
 }
-.botones svg{
-    width: 40px;
+.botones a{
+    text-decoration: none;
 }
-.botones{
+/*.botones{
     color: white;
     margin-right: 20px;
     width: 200px;
+    background: var(--primario);
     padding: 10px;
     border-radius: 20px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-}
+    align-items: center;
+}*/
 .botones svg path{
     fill:var(--cuarto);
 }
-.botones button{
+
+button{
     background: var(--primario);
-    font-size: 20px;
     width: 200px;
-    border-radius: 10px;
-    height: 40px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    border-radius: 20px;
     border: none;
+    margin-right: 20px;
+    text-decoration: none;
+}
+button svg{
+    margin-left: 50px;
+    width: 40px;
+}
+button p{
+    margin: 5px;
+    font-size: 20px;
+    color: white;
+}
+button:hover{
+    background: var(--segundario);
 }

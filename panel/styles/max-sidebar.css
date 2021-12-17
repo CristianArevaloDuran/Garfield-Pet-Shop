@@ -76,6 +76,9 @@
     border-radius: 50%;
     border: 5px solid var(--color-icon);
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: .25s ease;
 }
 
@@ -119,7 +122,7 @@
     padding: 5px 0;
     justify-content: flex-start;
     overflow-y: scroll;
-    max-height: 40%;
+    max-height: 35%;
 }
 
 .max-sidebar .dropdowns::-webkit-scrollbar {

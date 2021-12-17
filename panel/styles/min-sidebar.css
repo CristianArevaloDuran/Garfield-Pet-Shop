@@ -59,6 +59,9 @@ body {
     cursor: pointer;
     height: 70px;
     margin: 60px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     border: 3px solid var(--color-icon);
     transition: border-color .25s ease, border-width .25s ease;

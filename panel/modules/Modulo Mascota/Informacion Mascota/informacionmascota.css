@@ -90,3 +90,9 @@ p{
 .botones svg path{
     fill:var(--cuarto);
 }
+.botones a{
+    text-decoration: none;
+    display: flex;
+    color: white;
+    
+}

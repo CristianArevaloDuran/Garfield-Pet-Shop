@@ -33,7 +33,7 @@
 }
 .contenedor-propietario{
     background:var(--segundario);
-    margin: 60px;
+    margin: 40px;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -42,25 +42,25 @@
 }
 .man{
     background:var(--primario);
-    width: 100px;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 130px;
     border-radius: 50%;
     margin: 30px;
     
 }
 .man-color svg{
-    width: 30px;
+    width:30px;
 }
 .woman{
     background:var(--primario);
-    width: 100px;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 130px;
     border-radius: 50%;
     margin: 30px;
     
@@ -84,19 +84,27 @@
     position: relative;
 }
 .barra-busqueda{
-    left: 70%;
+    left: 50px;
     width: 30%;
     display: flex;
     top:0; 
-    margin-left: 50%;
+    margin-left: 120px;
+    
+}
+.busqueda{
+    width: 20%;
+    background:var(--primario);
+    margin: 5px;
+    border-radius: 20px;
 }
 
 .busqueda svg{
-    background: var(--primario);
-    width: 44px;
-    height: 44px;
+    display: flex;
+    width: 60%;
+    height: 60%;
     align-items: center;
     margin: 10px; 
+    align-items: center;
 }
 .barra-busqueda svg path{
     stroke: white;

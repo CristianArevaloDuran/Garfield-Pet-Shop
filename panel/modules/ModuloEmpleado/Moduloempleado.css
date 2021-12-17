@@ -31,40 +31,52 @@
 .contenedor h1{
     text-align: center;
 }
-.contenedor-empleado{
+.contenedor-propietario{
     background:var(--segundario);
-    margin: 60px;
+    margin: 40px;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-.empleado{
+.man{
     background:var(--primario);
-    width: 100px;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 130px;
     border-radius: 50%;
     margin: 30px;
     
 }
-.mascota-color svg{
-    width: 70px;
-    height: 70px;
+.man-color svg{
+    width:30px;
+}
+.woman{
+    background:var(--primario);
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    border-radius: 50%;
+    margin: 30px;
     
 }
-.mascota-color svg path{
+.woman-color svg{
+    width: 40px;
+}
+.woman-color svg path{
     stroke: var(--cuarto);
     fill: var(--cuarto);
 }
-/*.logo svg path{
+.man-color svg path{
     stroke: var(--cuarto);
     fill: var(--cuarto);
-}*/
-.info-empleado{
+}
+.info-propietario{
     left: 15%;
     position:absolute;
 }
@@ -72,21 +84,29 @@
     position: relative;
 }
 .barra-busqueda{
-    left: 30%;
+    left: 50px;
     width: 30%;
     display: flex;
     top:0; 
-    margin-left: 50%;
+    margin-left: 120px;
     
+}
+.busqueda{
+    width: 20%;
+    background:var(--primario);
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.busqueda svg{
+    display: flex;
+    width: 60%;
+    height: 60%;
+    align-items: center;
+    margin: 10px; 
+    align-items: center;
 }
 .barra-busqueda svg path{
     stroke: white;
     fill: white;
-}
-.busqueda svg{
-    background: var(--primario);
-    width: 50px;
-    height: 44px;
-    align-items: center;
-    margin: 10px; 
 }

@@ -20,16 +20,15 @@
     text-align: center;
 }
 .icono-man{
-    width: 200px;
-    height: 200px;
+    width: 165px;
+    height: 165px;
     margin: auto;
     background: var(--primario);
     border-radius: 50%;
     display: flex;
 }
 .logo{
-    top: 20px;
-    width: 120px;
+    width: 50px;
     margin: auto;
     align-items: center;
 }
@@ -37,28 +36,69 @@
     stroke: var(--cuarto);
     fill: var(--cuarto);
 }
-.contenedor-input{
+.contenedor-informacion{
     width: 70%;
-    height: 120px;
-    margin: 80px auto ;
+    height: 300px;
+    margin: 20px auto ;
     display: flex;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
 }
-.input-label input{
-    font-size: 18px;
-    width: 280px;
+.informacion{
+    display: flex;
+    align-items: center;
+    background: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+.informacion-personal{
+    margin-left: 20px;
+}
+.botones-principales{
     margin: auto;
     display: flex;
-    height: 50px;
-    border-radius: 10px;
-    border: none; 
-    background: rgb(231, 228, 228); 
+    width: 50%;
+    justify-content: center;
+    text-align: center;
 }
-.contenedor-input label{
-    font-size:20px;
-    margin: auto 5% ;
+.botones a{
+    text-decoration: none;
+}
+.botones{
+    color: white;
+    margin-right: 20px;
+    width: 200px;
+    background: var(--primario);
+    border-radius: 20px;
+    display: flex;
+    
+}
+button{
+    background: var(--primario);
+    width: 200px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    
+}
+.botones svg{
+    width: 40px;
+    margin-left: 40px;
+}
+.botones svg path{
+    stroke: var(--cuarto);
+    fill: var(--cuarto);
+}
+.botones button p{
+    margin: 5px;
+    font-size: 20px;
+    color: white;
 }
 
 button:hover{
@@ -69,22 +109,14 @@ button:hover{
     justify-content: center;
 }
 .boton input{
-    
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     border: none;
-    width: 150px;
+    width: 200px;
     background: var(--primario);
     font-size: 20px;
 }
 .boton input:hover{
     border:0.5px solid var(--primario);
     background: var(--segundario);
-}
-.contenedor-secundario{
-    align-content: center;
-    justify-content: center;
-}
-.botones a{
-    text-decoration: none;
 }
