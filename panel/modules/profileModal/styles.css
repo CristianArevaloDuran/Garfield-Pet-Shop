@@ -1,5 +1,56 @@
 @import url('../../../styles/root.css');
 
+.mensaje {
+    position: absolute;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: var(--bad);
+    border-radius: 10px;
+    padding: 10px 20px;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mensaje p {
+    color: var(--color-icon);
+    font-family: var(--fuente);
+}
+
+.mensaje .icon {
+    background-color: #000;
+    width: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px;
+    transition: .25s ease;
+}
+
+.mensaje .icon:hover {
+    background-color: var(--color-1);
+    box-shadow: 2px 2px var(--color-4);
+    transform: translate(-2px, -2px);
+}
+
+.mensaje .icon:hover > svg {
+    transform: rotate(90deg);
+}
+
+.mensaje .icon svg {
+    width: 100%;
+    transition: .25s ease;
+    height: 100%;
+}
+
+.mensaje .icon svg path {
+    fill: var(--color-icon);
+}
+
 .modal-content {
     width: 100%;
     height: 100vh;

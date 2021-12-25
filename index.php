@@ -1,3 +1,11 @@
+
+<?php
+    session_start();
+    if(isset($_SESSION["userid"])) {
+        header("Location: panel/panel.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,7 +21,7 @@
     <!--Parallax-->
 
     <div class="contenedor">
-        <a href='login/login.html' class="inicio_sesion">Iniciar sesión</a>
+        <a href='login/login.php' class="inicio_sesion">Iniciar sesión</a>
         <div class="contenido">
             <img src="img/logo.jpg" draggable="false" alt="">
             <h1>Garfield Pet Shop</h1>

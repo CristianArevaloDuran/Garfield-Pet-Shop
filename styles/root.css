@@ -15,6 +15,8 @@
     --color-3: #9FC5DE;
     --color-4: #A4EAF5;
     --color-5: #9DEBE0;
+    --correct: rgb(80, 231, 49);
+    --bad: rgb(236, 33, 33);
     --color-icon: #ffffff;
     --blur-color: #9da3eb70;
     --fuente: "Poppins";

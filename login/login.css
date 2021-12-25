@@ -1,5 +1,105 @@
 @import url(../styles/root.css);
 
+body {
+    overflow: hidden;
+}
+
+.mensaje {
+    position: absolute;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    top: -200px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    z-index: 50;
+    transition: .25s ease;
+}
+
+.mensaje-active-ok {
+    top: 0 !important;
+    background-color: rgb(80, 231, 49);
+}
+
+.mensaje-active-ok p {
+    color: #000 !important;
+}
+
+.mensaje-active-ok .icon {
+    background-color: var(--color-icon) !important;
+}
+
+.mensaje-active-ok .icon:hover {
+    box-shadow: 2px 2px var(--color-1) !important;
+}
+
+.mensaje-active-ok .icon svg path {
+    fill: #000 !important;
+}
+
+.mensaje-active-bad {
+    top: 0 !important;
+    background-color: rgb(236, 33, 33);
+}
+
+.mensaje-active-bad p {
+    color: var(--color-icon) !important;
+}
+
+.mensaje-active-bad .icon {
+    background-color: #000 !important;
+}
+
+.mensaje-active-bad .icon:hover {
+    box-shadow: 2px 2px var(--color-4) !important;
+}
+
+.mensaje-active-bad .icon svg path {
+    fill: var(--color-icon) !important;
+}
+
+.mensaje p {
+    font-family: var(--fuente);
+    font-size: 20px;
+}
+
+.mensaje .icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    height: 40px;
+    transition: .25s ease;
+}
+
+.mensaje .icon:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px var(--color-4);
+}
+
+.mensaje .icon:hover > svg {
+    transform: rotate(90deg);
+}
+
+.mensaje .icon svg {
+    width: 100%;
+    height: 100%;
+    transition: .25s ease;
+}
+
+.mensaje .icon svg path {
+    fill: var(--color-icon);
+}
+
 .contenedor {
     width: 100%;
     height: 100vh;

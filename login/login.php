@@ -1,3 +1,11 @@
+
+<?php
+    session_start();
+    if(isset($_SESSION["userid"])) {
+        header("Location: ../panel/panel.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,10 +17,16 @@
     <title>Login</title>
 </head>
 <body>
+    <div id="loginMensaje" class="mensaje">
+        <p></p>
+        <div id="logMenCloseSButton" class="icon">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+        </div>
+    </div>
     <div class="contenedor">
         <div class="login-bloque">
             <div class="flecha">
-                <a href="../index.html">
+                <a href="../index.php">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path>
                     </svg>
                 </a>
@@ -22,15 +36,15 @@
             </div>
             <div class="formulario">
                 <h1>Inicio de sesión</h1>
-                <form action="">
+                <form id="loginForm">
                     <div class="identificacion">
                         <label for="id">Identificación</label>
-                        <input type="number" min="0" id="id">
+                        <input type="number" name="identificacion" min="0" id="id">
                     </div>
                     <div class="pass">
                         <label for="pass">Contraseña</label>
                         <div class="pass-field">
-                            <input type="password" id="pass">
+                            <input type="password" name="password" id="pass">
                             <div class="eye">
                                 <button id="reveal">
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18 svgEye rotate-svg" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path>
@@ -48,6 +62,7 @@
             </div>
         </div>
     </div>
+    <script src="loginQuery.js"></script>
     <script src="reveal.js"></script>
 </body>
 </html>
