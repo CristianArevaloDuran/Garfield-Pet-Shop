@@ -1,17 +1,24 @@
 <?php
     session_start();
 
-    $password = $_POST["password"];
-    require("../../../db/dbConnection.php");
-    $query = $conexion->prepare("SELECT emp.idEmpleado, emp.conEmpleado FROM tblEmpleados as emp WHERE emp.idEmpleado = '$_SESSION[userid]'");
-    $query-> setFetchMode(PDO::FETCH_ASSOC);
-    $query-> execute();
-    $result = $query->fetch();
+    include("../../../db/dbConnection.php");
 
-    if(password_verify($password, $result["conEmpleado"])) {
-        header("Location: editData/editData.php");
+    $password = $_POST["password"];
+
+    if($password == "") {
+        echo json_encode(array("bool" => false, "value" => "Ingrese su contraseña"));
     } else {
-        $_SESSION["status"] = false;
-        header("Location: profileModal.php");
+        $query = $conexion->prepare("SELECT * FROM tblEmpleados WHERE idEmpleado = '$_SESSION[userid]'");
+        $query-> setFetchMode(PDO::FETCH_ASSOC);
+        $query->execute();
+        $result = $query->fetch();
+
+        if(password_verify($password, $result["conEmpleado"])) {
+            echo json_encode(array("bool" => true, "value" => ""));
+            $_SESSION["passConfirmed"] = true;
+        } else {
+            echo json_encode(array("bool" => false, "value" => "Contraseña incorrecta"));
+        }
     }
+
 ?>

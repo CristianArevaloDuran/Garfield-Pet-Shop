@@ -5,6 +5,7 @@ const profileModalButton4 = document.getElementById("profileModalButton4");
 const profileModal = document.getElementById("profileModal");
 const profileModalClose = document.getElementById("profileModalClose");
 const profileModalContent = document.getElementById("profileModalContent");
+const profileModalIframe = document.getElementById("profileModalIframe");
 
 profileModalButton1.addEventListener("click", openModal);
 profileModalButton2.addEventListener("click", openModal);
@@ -24,5 +25,6 @@ function closeModal(event) {
     profileModalContent.style.width = "50%";   
     setTimeout(()=>{
         profileModal.style.display = "none";
+        profileModalIframe.src = "modules/profileModal/profileModal.php";
     }, 170);
 }

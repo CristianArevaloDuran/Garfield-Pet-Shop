@@ -1,6 +1,7 @@
 
 <?php
     session_start();
+    $_SESSION["passConfirmed"] = false;
     if(!$_SESSION["userid"]) {
         header("Location: ../../../login/login.php");
     }
@@ -16,20 +17,20 @@
     <title>profileModal</title>
 </head>
 <body>
-    <?php if(isset($_SESSION["status"]) && $_SESSION["status"] == false) { ?>
-        <div class="mensaje">
-            <p>Contraseña incorrecta</p>
-            <div class="icon">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
-            </div>
+
+    <div class="mensaje">
+        <p></p>
+        <div class="icon">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
         </div>
-    <?php } $_SESSION["status"] = true; ?>
+    </div>
+
     <div class="modal-content">
         <div class="titulo">
             <h2>Confirmar contraseña</h2>
         </div>
         <div class="pass-confirm">
-            <form action="passwordConfirm.php" method="post">
+            <form id="passConfirmForm">
                 <label for="pass">Contraseña</label>
                 <div class="input">
                     <input type="password" name="password" id="pass">
@@ -47,5 +48,6 @@
         </div>
     </div>
     <script src="reveal.js"></script>
+    <script src="passwordConfirm.js"></script>
 </body>
 </html>

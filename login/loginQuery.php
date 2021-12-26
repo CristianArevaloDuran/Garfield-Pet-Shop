@@ -1,6 +1,7 @@
 <?php
     session_start();
     include("../db/dbConnection.php");
+    
     $identificacion = $_POST["identificacion"];
     $password = $_POST["password"];
 
