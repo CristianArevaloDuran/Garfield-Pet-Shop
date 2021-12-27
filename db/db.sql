@@ -36,6 +36,15 @@ create table tblRolPrivilegio(
 
 /*---*/
 
+/*Imagenes empleados*/
+
+create table tblImgEmpleados(
+	idImagen int unsigned primary key auto_increment not null,
+    imagen blob not null
+);
+
+/**/
+
 /*Estado*/
 
 create table tblEstado(
@@ -49,7 +58,10 @@ create table tblEstado(
 
 create table tblEmpleados(
     idEmpleado int unsigned unique not null primary key,
-    imgEmpleado blob null,
+    imgEmpleado int unsigned not null,
+    constraint FK_imgEmpleadoId foreign key (imgEmpleado)
+    references tblImgEmpleados(idImagen)
+    on update cascade on delete cascade,
     nomEmpleado varchar(25) not null,
     apeEmpleado varchar(25) not null,
     corEmpleado varchar(50) not null,
@@ -70,13 +82,14 @@ create table tblEmpleados(
 );
 
 drop table tblEmpleados;
+drop table tblImgEmpleados;
 
 /*Inserción de datos*/
-
+select * from tblImgEmpleados;
 insert into tblRol(nombreRol) values ("Administrador");
 insert into tblEstado(nomEstado) values ("Activo");
 insert into tblEmpleados values (1069712878,
-	null,
+	1,
 	"Cristian", 
 	"Arévalo Duran", 
     "cristianarevaloduran@gmail.com", 

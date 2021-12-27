@@ -16,6 +16,7 @@
         if(password_verify($password, $result["conEmpleado"])) {
             echo json_encode(array("bool" => true, "value" => ""));
             $_SESSION["passConfirmed"] = true;
+            $_SESSION["passwordTemp"] = $password;
         } else {
             echo json_encode(array("bool" => false, "value" => "Contraseña incorrecta"));
         }

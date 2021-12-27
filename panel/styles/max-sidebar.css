@@ -74,6 +74,7 @@
     min-width: 150px;
     min-width: 150px;
     border-radius: 50%;
+    background-color: var(--color-icon);
     border: 5px solid var(--color-icon);
     cursor: pointer;
     display: flex;

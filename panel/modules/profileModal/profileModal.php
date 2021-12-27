@@ -2,6 +2,7 @@
 <?php
     session_start();
     $_SESSION["passConfirmed"] = false;
+    $_SESSION["passwordTemp"] = "";
     if(!$_SESSION["userid"]) {
         header("Location: ../../../login/login.php");
     }

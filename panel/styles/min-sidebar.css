@@ -58,6 +58,7 @@ body {
     width: 70px;
     cursor: pointer;
     height: 70px;
+    background-color: var(--color-icon);
     margin: 60px auto 0;
     display: flex;
     justify-content: center;
