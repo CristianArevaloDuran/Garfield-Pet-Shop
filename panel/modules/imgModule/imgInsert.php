@@ -1,8 +1,15 @@
 <?php
     session_start();
+    require("../../../db/dbConnection.php");
     if(!$_SESSION["userid"]) {
         header("Location: ../../../login/login.php");
     }
+
+    $query = $conexion->prepare("SELECT * FROM tblImgEmpleados");
+    $query-> setFetchMode(PDO::FETCH_ASSOC);
+    $query-> execute();
+    $result = $query->fetch();
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +34,11 @@
             <h1>Lista de imagenes</h1>
         </div>
         <div class="img-list">
-            
+            <?php while($result) { ?>
+                <div class="img">
+                    <img draggable="false" src="data:image/png;base64,<?= base64_encode($result["imagen"]) ?>" alt="">
+                </div>
+            <?php } ?>
         </div>
     </div>
 </body>
