@@ -151,7 +151,7 @@
             <div class="dropdown-content">
                 <div class="content">
                     <a href="modules/ModuloEmpleado/moduloempleado.html"  target="contenido" onclick="sidebarToggle()">Lista de empleados</a>
-                    <a href="" target="contenido" onclick="sidebarToggle()">Otra cosa</a>
+                    <a href="modules/imgModule/imgInsert.php" target="contenido" onclick="sidebarToggle()">Lista de imagenes</a>
                 </div>
             </div>
 
