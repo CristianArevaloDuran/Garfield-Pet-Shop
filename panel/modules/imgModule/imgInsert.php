@@ -8,7 +8,6 @@
     $query = $conexion->prepare("SELECT * FROM tblImgEmpleados");
     $query-> setFetchMode(PDO::FETCH_ASSOC);
     $query-> execute();
-    $result = $query->fetch();
 
 ?>
 
@@ -34,7 +33,7 @@
             <h1>Lista de imagenes</h1>
         </div>
         <div class="img-list">
-            <?php while($result) { ?>
+            <?php while($result = $query->fetch()) { ?>
                 <div class="img">
                     <img draggable="false" src="data:image/png;base64,<?= base64_encode($result["imagen"]) ?>" alt="">
                 </div>
