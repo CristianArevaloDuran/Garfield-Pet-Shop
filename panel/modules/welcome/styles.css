@@ -21,9 +21,13 @@ body {
 
 .welcome-content img {
     border-radius: 50%;
-    width: 15%;
+    width: 35%;
     border: 5px solid var(--color-icon);
     height: 15%;
+    box-shadow: 4px 4px 6px var(--color-1), 
+    -4px 4px 6px var(--color-1), 
+    -4px -4px 6px var(--color-1),
+    4px -4px 6px var(--color-1);
 }
 
 .welcome-content h2 {
@@ -32,14 +36,56 @@ body {
     font-size: 35px;
 }
 
-.welcome-content p {
-    width: 40%;
-    font-family: var(--fuente);
-    text-align: center;
-    margin-top: 30px;
-    font-size: 25px;
+.bloque {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
 }
 
+.bloque .item {
+    text-decoration: none;
+    margin: 0 20px;
+    width: 300px;
+    padding: 40px 0;
+    height: 250px;
+    background-color: var(--color-1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .25s ease;
+}
+
+.bloque .item svg {
+    transition: .25s ease;
+}
+
+.bloque .item:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px var(--color-1);
+    background-color: var(--color-3);
+}
+
+.bloque .item:hover > svg {
+    fill: var(--color-icon);
+}
+
+.bloque .item:hover > p {
+    color: var(--color-icon);
+}
+
+.bloque .item p {
+    text-align: center;
+    width: 100%;
+    font-family: var(--fuente);
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+    color: #111;
+    font-weight: bold;
+    transition: .25s ease;
+}
 
 @media screen and (max-width: 1400px) {
     .welcome-content p {

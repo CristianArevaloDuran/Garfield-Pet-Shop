@@ -117,7 +117,7 @@
             <div class="dropdown-content">
                 <div class="content">
                     <a href="modules/Modulo Propietario/ModuloPropietario.html" target="contenido"  onclick="sidebarToggle()">Propietarios</a>
-                    <a href="modules/Modulo Mascota/moduloMascota.html" target="contenido" onclick="sidebarToggle()">Mascotas</a>
+                    <a href="C:\Users\crist\Desktop\Plantillas\lista\lista.html" target="contenido" onclick="sidebarToggle()">Mascotas</a>
                 </div>
             </div>
 
@@ -150,7 +150,7 @@
 
             <div class="dropdown-content">
                 <div class="content">
-                    <a href="modules/ModuloEmpleado/moduloempleado.html"  target="contenido" onclick="sidebarToggle()">Lista de empleados</a>
+                    <a href="modules/ModuloEmpleado/moduloEmpleado.php"  target="contenido" onclick="sidebarToggle()">Lista de empleados</a>
                     <a href="modules/imgModule/imgInsert.php" target="contenido" onclick="sidebarToggle()">Lista de imagenes</a>
                 </div>
             </div>
