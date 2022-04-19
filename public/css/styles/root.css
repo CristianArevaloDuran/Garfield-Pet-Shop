@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../../font/Poppins-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: #9DA3EB;
+    --color-2: #A4BFF5;
+    --color-3: #9FC5DE;
+    --color-4: #A4EAF5;
+    --color-5: #9DEBE0;
+    --correct: rgb(80, 231, 49);
+    --bad: rgb(236, 33, 33);
+    --color-icon: #ffffff;
+    --blur-color: #9da3eb70;
+    --fuente: "Poppins";
+}
