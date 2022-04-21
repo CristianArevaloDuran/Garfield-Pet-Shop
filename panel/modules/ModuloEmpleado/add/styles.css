@@ -325,12 +325,6 @@
     border: 1.5px solid #000;
 }
 
-.container .data::-webkit-scrollbar-button:start:increment {
-    height: 70px;
-    display: block;
-    background-color: transparent;
-}
-
 .container .data form {
     display: flex;
     flex-direction: column;

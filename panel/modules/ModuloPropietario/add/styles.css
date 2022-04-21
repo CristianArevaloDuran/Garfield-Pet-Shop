@@ -1,4 +1,4 @@
-@import url("../../../../styles/root.css");
+@import url("../styles/root.css");
 
 .mensaje {
     position: absolute;
@@ -323,12 +323,6 @@
     background-color: var(--color-4);
     border-radius: 20px;
     border: 1.5px solid #000;
-}
-
-.container .data::-webkit-scrollbar-button:start:increment {
-    height: 70px;
-    display: block;
-    background-color: transparent;
 }
 
 .container .data form {

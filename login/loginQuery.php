@@ -12,7 +12,9 @@
         $query->setFetchMode(PDO::FETCH_ASSOC);
         $query->execute();
         $result = $query->fetch();
-        if(password_verify($password, $result["conEmpleado"])) {
+        if(empty($result)) {
+            echo json_encode(array("bool" => false, "value" => 'Usuario no encontrado'));
+        } else if(password_verify($password, $result["conEmpleado"])) {
             echo json_encode(array("bool" => true, "value" => $result));
             $_SESSION["userid"] = $result["idEmpleado"];
         } else {

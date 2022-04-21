@@ -64,14 +64,16 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 3px solid var(--color-icon);
     transition: border-color .25s ease, border-width .25s ease;
 }
 
 .min-sidebar .user-profile .user-img img {
     width: 100%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
+    transition: .25s ease;
+    border: 3px solid var(--color-icon);
 }
 
 .min-sidebar .user-profile .user-data {
@@ -94,7 +96,7 @@ body {
     box-shadow: 2px 2px var(--color-5);
 }
 
-.min-sidebar .user-profile .user-img:hover {
+.min-sidebar .user-profile .user-img:hover > img {
     border-color: var(--color-5);
     border-width: 5px;
 }

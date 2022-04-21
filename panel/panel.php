@@ -2,7 +2,7 @@
 <?php
     session_start();
     if(!isset($_SESSION["userid"])) {
-        header("Location: ../login/login.php");
+        header("Location: ../login/login");
     } else {
         require("../db/dbConnection.php");
         $query = $conexion->prepare("SELECT img.imagen, emp.nomEmpleado, emp.apeEmpleado, rol.nombreRol FROM tblEmpleados as emp INNER JOIN tblRol as rol on emp.rolEmpleado = rol.idRol INNER JOIN tblImgEmpleados as img ON emp.imgEmpleado = img.idImagen WHERE idEmpleado = '$_SESSION[userid]'");
@@ -18,7 +18,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/min-sidebar.css">    
     <link rel="stylesheet" href="styles/max-sidebar.css">
@@ -74,7 +74,7 @@
             <div class="button" id="sidebarContent3">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="suitcase" class="svg-inline--fa fa-suitcase fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M128 480h256V80c0-26.5-21.5-48-48-48H176c-26.5 0-48 21.5-48 48v400zm64-384h128v32H192V96zm320 80v256c0 26.5-21.5 48-48 48h-48V128h48c26.5 0 48 21.5 48 48zM96 480H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48h48v352z"></path></svg>
             </div>
-            <a href="logout/logout.php" class="button logout">
+            <a href="logout/logout" class="button logout">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt" class="svg-inline--fa fa-sign-out-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"></path></svg>
             </a>
         </div>
@@ -116,8 +116,8 @@
 
             <div class="dropdown-content">
                 <div class="content">
-                    <a href="modules/Modulo Propietario/ModuloPropietario.html" target="contenido"  onclick="sidebarToggle()">Propietarios</a>
-                    <a href="C:\Users\crist\Desktop\Plantillas\lista\lista.html" target="contenido" onclick="sidebarToggle()">Mascotas</a>
+                    <a href="modules/ModuloPropietario/moduloPropietario" target="contenido"  onclick="sidebarToggle()">Propietarios</a>
+                    <a href="modules/ModuloMascota/Mascota/moduloMascota" target="contenido" onclick="sidebarToggle()">Mascotas</a>
                 </div>
             </div>
 
@@ -133,8 +133,7 @@
 
             <div class="dropdown-content">
                 <div class="content">
-                    <a href="modules/ModuloServicios/servicios.html" onclick="sidebarToggle()" target="contenido">Lista de Servicios</a>
-                    <a href="" target="contenido" onclick="sidebarToggle()">Otra cosa</a>
+                    <a href="modules/ModuloServicios/servicios" onclick="sidebarToggle()" target="contenido">Lista de Servicios</a>
                 </div>
             </div>
 
@@ -150,12 +149,13 @@
 
             <div class="dropdown-content">
                 <div class="content">
-                    <a href="modules/ModuloEmpleado/moduloEmpleado.php"  target="contenido" onclick="sidebarToggle()">Lista de empleados</a>
-                    <a href="modules/imgModule/imgInsert.php" target="contenido" onclick="sidebarToggle()">Lista de imagenes</a>
+                    <a href="modules/ModuloEmpleado/moduloEmpleado"  target="contenido" onclick="sidebarToggle()">Lista de empleados</a>
+                    <a href="modules/ModuloRoles/roles" target="contenido" onclick="sidebarToggle()">Lista de roles</a>
+                    <a href="modules/imgModule/imgInsert" target="contenido" onclick="sidebarToggle()">Lista de imagenes</a>
                 </div>
             </div>
 
-            <a href="logout/logout.php" class="logout">
+            <a href="logout/logout" class="logout">
                 <div class="icon-title">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt" class="svg-inline--fa fa-sign-out-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"></path></svg>
                     <p>Cerrar sesión</p>
@@ -222,7 +222,7 @@
 
         </div>
         <div class="iframe-container">
-            <iframe src="modules/welcome/welcome.html" frameborder="0" name="contenido"></iframe>
+            <iframe src="modules/welcome/welcome" frameborder="0" name="contenido"></iframe>
         </div>
     </div>
 

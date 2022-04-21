@@ -2,7 +2,7 @@
 <?php
     session_start();
     if(isset($_SESSION["userid"])) {
-        header("Location: panel/panel.php");
+        header("Location: panel/panel");
     }
 ?>
 
@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <title>Garfield Pet Shop</title>
 </head>
@@ -21,7 +21,7 @@
     <!--Parallax-->
 
     <div class="contenedor">
-        <a href='login/login.php' class="inicio_sesion">Iniciar sesión</a>
+        <a href='login/login' class="inicio_sesion">Iniciar sesión</a>
         <div class="contenido">
             <img src="img/logo.jpg" draggable="false" alt="">
             <h1>Garfield Pet Shop</h1>

@@ -1,0 +1,6 @@
+Crear base de datos con nombre gps e importar el archivo gps.sql
+
+Login:
+
+-- Identificación: 1069712878
+-- Contraseña: Noviembre30

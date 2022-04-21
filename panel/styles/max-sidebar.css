@@ -69,27 +69,25 @@
 }
 
 .max-sidebar .user-profile .user-img {
-    max-width: 250px;
-    max-height: 250px;
-    min-width: 150px;
-    min-width: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     background-color: var(--color-icon);
-    border: 5px solid var(--color-icon);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .25s ease;
 }
 
-.max-sidebar .user-profile .user-img:hover {
+.max-sidebar .user-profile .user-img:hover > img {
     border: 8px solid var(--color-5);
 }
 
 .max-sidebar .user-profile .user-img img {
     width: 100%;
+    border: 5px solid var(--color-icon);
     height: 100%;
+    transition: .25s ease;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -124,7 +122,7 @@
     align-items: center;
     padding: 5px 0;
     justify-content: flex-start;
-    overflow-y: scroll;
+    overflow-x: hidden;
     max-height: 35%;
 }
 

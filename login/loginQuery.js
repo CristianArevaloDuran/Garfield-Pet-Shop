@@ -6,19 +6,22 @@ let logMenCloseButton = document.getElementById("logMenCloseSButton");
 loginForm.addEventListener("submit", (e)=>{
     e.preventDefault();
     let loginData = new FormData(loginForm);
-
-    fetch("loginQuery.php", {
-        method: "POST",
-        body: loginData
-    })
-        .then(res => res.json())
-        .then(data =>{
-            if(data.bool == false) {
-                mensajeOpen("mensaje-active-bad", data.value);
-            } else {
-                window.location.replace("../panel/panel.php");
-            }
+    if((loginData.get('identificacion')).match(/\d+/) == loginData.get('identificacion')){
+        fetch("loginQuery.php", {
+            method: "POST",
+            body: loginData
         })
+            .then(res => res.json())
+            .then(data =>{
+                if(data.bool == false) {
+                    mensajeOpen("mensaje-active-bad", data.value);
+                } else {
+                    window.location.replace("../panel/panel");
+                }
+            })
+    } else {
+        mensajeOpen('mensaje-active-bad', 'Ingrese un número de identificación válido');
+    }
 })
 
 function mensajeOpen(status, value) {

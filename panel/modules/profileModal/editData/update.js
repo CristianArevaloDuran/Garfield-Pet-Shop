@@ -13,26 +13,28 @@ formUpdate.addEventListener("submit", (e)=>{
         .then(res => res.json())
         .then(data => {
             if(data.bool == false) {
-                mensajeContainer.classList.add("mensaje-active");
-                mensajeContainer.querySelector("p").innerHTML = data.value;
-                mensajeContainer.querySelector(".icon").addEventListener("click", ()=> {
-                    mensajeContainer.classList.remove("mensaje-active");
-                })
-                setTimeout(()=>{
-                    mensajeContainer.classList.remove("mensaje-active");
-                }, 2500);
+                mensajeOpen('mensaje-active-bad', data.value, data.bool);
             } else {
-                mensajeContainer.classList.add("mensaje-active-ok");
-                mensajeContainer.querySelector("p").innerHTML = data.value;
-                mensajeContainer.querySelector(".icon").addEventListener("click", ()=> {
-                    mensajeContainer.classList.remove("mensaje-active-ok");
-                })
-                setTimeout(()=>{
-                    mensajeContainer.classList.remove("mensaje-active-ok");
-                }, 2000);
-                setTimeout(()=>{
-                    window.top.location.replace("../../../panel.php");
-                },2050)
+                mensajeOpen('mensaje-active-ok', data.value, data.bool);
             }
         })
 })
+
+function mensajeOpen(status, value, bool) {
+    mensajeContainer.classList.add(status);
+    mensajeContainer.querySelector("p").innerText = value;
+    mensajeContainer.querySelector(".icon").addEventListener("click", ()=> {
+        mensajeContainer.classList.remove(status);
+    })
+    setTimeout(()=>{
+        mensajeContainer.classList.remove(status);
+    }, 2500);
+    if(bool) {
+        setTimeout(()=>{
+            mensajeContainer.classList.remove("mensaje-active-ok");
+        }, 2000);
+        setTimeout(()=>{
+            window.top.location.replace("../../../panel.php");
+        },2050)
+    }
+}
