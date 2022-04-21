@@ -16,7 +16,7 @@
             session_start();
             if(isset($_SESSION['userid'])) {
                 ?>
-                <a href="./panel/modules/welcome/welcome" target="contenido">Volver</a>
+                <a href="" onclick="redirect()">Volver</a>
                 <?php
             } else {
                 ?>
@@ -25,5 +25,10 @@
             }
         ?>
     </div>
+    <script>
+        function redirect() {
+            window.top.location.replace("./panel/panel");
+        }
+    </script>
 </body>
 </html>

@@ -316,14 +316,14 @@
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 1400px) {
-    .max-sidebar .user-img {
-        width: 150px;
-        height: 150px;
+@media screen and (max-width: 1600px) {
+    .max-sidebar .user-profile .user-img {
+        width: 160px;
+        height: 160px;
     }
 
     .max-sidebar .dropdowns {
-        max-height: 25%;
+        max-height: 30%;
         margin-top: 10px;
     }
 }

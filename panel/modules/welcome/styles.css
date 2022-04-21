@@ -21,7 +21,7 @@ body {
 
 .welcome-content img {
     border-radius: 50%;
-    width: 35%;
+    width: 30%;
     border: 5px solid var(--color-icon);
     height: 15%;
     box-shadow: 4px 4px 6px var(--color-1), 
@@ -45,9 +45,9 @@ body {
 .bloque .item {
     text-decoration: none;
     margin: 0 20px;
-    width: 300px;
+    width: 250px;
     padding: 40px 0;
-    height: 250px;
+    height: 200px;
     background-color: var(--color-1);
     border-radius: 20px;
     display: flex;

@@ -1,4 +1,4 @@
-@import url("../../../../styles/root.css");
+@import url("../styles/root.css");
 
 .container {
     width: 100%;
@@ -57,7 +57,7 @@
 .container .content .user-data .datos {
     width: 90%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     overflow-x: hidden;
 }
 

@@ -27,46 +27,9 @@
                 <h1 class='role'><?= $result['nombreRol'] ?></h1>
                 <div class='datos'>
                     <div class='dato'>
-                        <p class='title'>Correo Electrónico:</p>
+                        <p class='title'>Privilegios:</p>
                         <div class='text'>
-                            <p><?= $result['corEmpleado'] ?></p>
-                        </div>
-                    </div>
-                    <div class='dato'>
-                        <p class='title'>Télefono:</p>
-                        <div class='text'>
-                            <p><?= $result['telEmpleado'] ?></p>
-                        </div>
-                    </div>
-                    <div class='dato'>
-                        <p class='title'>Dirección:</p>
-                        <div class='text'>
-                            <p><?= $result['dirEmpleado'] ?></p>
-                        </div>
-                    </div>
-                    <div class='dato'>
-                        <p class='title'>Fecha de Nacimiento:</p>
-                        <div class='text'>
-                            <p><?= $result['fecNacimiento'] ?></p>
-                        </div>
-                    </div>
-                    <div class='dato'>
-                        <p class='title'>Estado:</p>
-                        <div class='text'>
-                            <p><?= $result['nomEstado'] ?></p>
-                            <?php
-                                if($result['nomEstado'] == 'Activo') {
-                                    ?>
-                                        <div class='rolA'></div>
-                                    <?php
-                                }
-                            ?>
-                        </div>
-                    </div>
-                    <div class='dato'>
-                        <p class='title'>Identificación:</p>
-                        <div class='text'>
-                            <p><?= $result['idEmpleado'] ?></p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
