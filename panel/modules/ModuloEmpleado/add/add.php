@@ -5,7 +5,7 @@
     if(!isset($_SESSION["userid"])) {
         
     } else {
-        $query = $conexion->prepare("SELECT *, img.imagen FROM tblEmpleados as emp INNER JOIN tblRol as rol ON emp.rolEmpleado = rol.idRol INNER JOIN tblEstado as est ON emp.estEmpleado = est.idEstado,  tblImgEmpleados as img");
+        $query = $conexion->prepare("SELECT img.imagen, emp.nomEmpleado, emp.apeEmpleado, rol.nombreRol, priv.privilegio FROM tblEmpleados as emp INNER JOIN tblRol as rol on emp.rolEmpleado = rol.idRol INNER JOIN tblImgEmpleados as img ON emp.imgEmpleado = img.idImagen INNER JOIN tblrolprivilegio as rolpriv ON rol.idRol = rolpriv.idRol INNER JOIN tblprivilegios as priv ON rolpriv.idPrivilegio = priv.idPrivilegio WHERE idEmpleado = '$_SESSION[userid]'");
         $query-> setFetchMode(PDO::FETCH_ASSOC);
         $query->execute();
         $result = $query->fetch();    
@@ -87,11 +87,15 @@
                     </div>
                     <div class="input">
                         <label for="role">Rol</label>
-                        <input required="true" type="text" name="role" id="role">
-                    </div>
-                    <div class="input">
-                        <label for="estate">Estado</label>
-                        <input required="true" type="text" name="estate" id="estate">
+                        <select required="true" type="text" name="role" id="role">
+                            <?php
+                                $rolquery = $conexion->prepare("SELECT * FROM tblrol");
+                                $rolquery->execute();
+                                while($rolresult = $rolquery->fetch(PDO::FETCH_ASSOC)) {
+                            ?>    
+                                <option value="<?= $rolresult['idRol'] ?>"><?= $rolresult['nombreRol'] ?></option>
+                            <?php } ?>
+                        </select>
                     </div>
                     <div class="input">
                         <label for="id">Identificación</label>
@@ -113,7 +117,7 @@
                         </div>
                     </div>
                     <div class="input">
-                        <input hidden required="false" type="text" name="imagen" id="imagen" value="<?= $result["idImagen"] ?>">
+                        <input hidden required="false" type="text" name="imagen" id="imagen" value="1">
                     </div>
                 </div>
                 <input type="submit" value="Actualizar">
