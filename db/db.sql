@@ -87,6 +87,7 @@ drop table tblImgEmpleados;
 /*Inserción de datos*/
 select * from tblImgEmpleados;
 insert into tblRol(nombreRol) values ("Administrador");
+insert into tblPrivilegios(privilegio) values ("verCliente");
 insert into tblEstado(nomEstado) values ("Activo");
 insert into tblEmpleados values (1069712878,
 	1,
