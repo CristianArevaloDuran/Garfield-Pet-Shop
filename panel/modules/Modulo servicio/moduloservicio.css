@@ -39,12 +39,17 @@
 }
 .contenedor-input{
     width: 70%;
-    height: 120px;
+    height: 100px;
     margin: 80px auto ;
     display: flex;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
+}
+.input-label{
+    display: flex;
+    flex-direction: column;
+    
 }
 .input-label input{
     font-size: 18px;

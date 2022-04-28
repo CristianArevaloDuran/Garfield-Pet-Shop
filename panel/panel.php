@@ -113,7 +113,7 @@
         <div class="dropdowns">
             <?php
                 while($row = $query->fetch()) {
-                    if($row['privilegio'] == 'verCliente') {
+                    if($row['privilegio'] == 'verCliente') {}}
             ?>
             <div class="dropdown" id="sidebarContent4">
                 <div class="icon-title">

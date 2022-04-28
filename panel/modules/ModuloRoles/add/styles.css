@@ -206,6 +206,13 @@
     box-shadow: 2px 2px var(--color-1);
 }
 
+.container .data form .input .privilegios {
+    background-color: var(--color-1);
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
 @media screen and (max-width: 1400px) {
     .container .data {
         width: 95%;

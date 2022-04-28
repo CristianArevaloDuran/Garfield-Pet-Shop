@@ -35,8 +35,19 @@
                         <input type="name" name="name" id="name">
                     </div>
                     <div class="input">
-                        <label class='label'>Privilegios</label>
-                        <div class='privilegios'>
+                        <div class="privilegios">
+                            <label class='label'>Privilegios</label>
+                            <div class='checks'>
+                                <div class="mod">
+
+                                </div>
+                                <div class="mod">
+
+                                </div>
+                                <div class="mod">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
