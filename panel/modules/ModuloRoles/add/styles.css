@@ -251,6 +251,199 @@
     box-shadow: 2px 2px var(--color-4);
 }
 
+.dropdowns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    max-height: 35%;
+}
+
+.dropdowns::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--color-4);
+    border-radius: 20px;
+}
+
+.dropdowns::-webkit-scrollbar-thumb {
+    background-color: var(--color-1);
+    border-radius: 20px;
+    border: 1px solid var(--color-icon);
+}
+
+.dropdowns .dropdown {
+    display: flex;
+    cursor: pointer;
+    z-index: 20;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 85%;
+    background-color: var(--bad);
+    border-radius: 15px;
+    transition: .25s ease;
+}
+
+.dropdowns .dropdown .icon-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdowns .dropdown .icon-title svg {
+    width: 30px;
+    height: 30px;
+}
+
+.dropdowns .dropdown .icon-title p {
+    font-family: var(--fuente);
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.dropdowns .dropdown .arrow-down {
+    width: 40px;
+    height: 40px;
+}
+
+.dropdowns .dropdown .arrow-down svg {
+    width: 40px;
+    height: 40px;
+    transition: .25s ease;
+}
+
+.dropdowns .dropdown:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px var(--color-5);
+    background-color: #ccc;
+}
+
+.dropdown-active {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 0 var(--color-5);
+    background-color: var(--correct) !important;
+    border-radius: 15px 15px 0 0 !important;
+}
+
+.dropdowns .dropdown-content {
+    width: 85%;
+    background-color: #E5E5E5;
+    margin-bottom: 10px;
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 15px 15px;
+    transition: .25s ease;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .25s ease;
+}
+
+.dropdown-content-active {
+    overflow: visible !important;
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px var(--color-5), 3px 0 var(--color-5);
+    background-color: #ccc;
+    border-radius: 0 0 15px 15px !important;
+}
+
+.dropdowns .dropdown-content .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 10px 20px;
+}
+
+.dropdowns .dropdown-content .content label {
+    font-family: var(--fuente);
+    font-size: 20px;
+}
+
+.dropdowns .dropdown-content .content a {
+    text-decoration: none;
+    font-family: var(--fuente);
+    color: #000;
+    width: 80%;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--color-icon);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    transition: .25s ease;
+}
+
+.dropdowns .dropdown-content .content a:last-child {
+    margin-bottom: 0;
+}
+
+.dropdowns .dropdown-content .content a:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px var(--color-5);
+    background-color: #ccc;
+}
+
+.dropdowns .logout {
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 85%;
+    background-color: var(--color-icon);
+    border-radius: 15px;
+    transition: .25s ease;
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdowns .logout .icon-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdowns .logout .icon-title svg {
+    width: 30px;
+    height: 30px;
+    transform: rotate(-180deg);
+}
+
+.dropdowns .logout .icon-title p {
+    font-family: var(--fuente);
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.dropdowns .logout .arrow-down {
+    width: 40px;
+    height: 40px;
+    visibility: hidden;
+}
+
+.dropdowns .logout .arrow-down svg {
+    width: 40px;
+    height: 40px;
+}
+
+
+.dropdowns .logout:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px var(--color-5);
+    background-color: #ccc;
+}
+
 @media screen and (max-width: 1400px) {
     .container .data {
         width: 95%;
