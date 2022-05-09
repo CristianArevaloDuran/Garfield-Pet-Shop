@@ -103,6 +103,7 @@
     background-color: transparent;
     font-family: var(--fuente);
     font-size: 20px;
+    padding: 0 10px;
 }
 
 .container .content .user-data .buttons {
@@ -142,4 +143,18 @@
     height: 30px;
     background-color: rgb(25, 211, 25);
     border-radius: 20px;
+}
+
+.roles {
+    display: flex;
+    flex-direction: row;
+}
+
+.bot {
+    width: 30px;
+    height: 30px;
+    padding: 0 20px;
+    background-color: var(--correct);
+    border-radius: 20px;
+    margin-right: 10px;
 }

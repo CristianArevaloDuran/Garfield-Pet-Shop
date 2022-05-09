@@ -1,15 +1,31 @@
-let formUpdate = document.getElementById("addRole");
+let buttons = document.querySelectorAll(".trash");
+let cancel = document.getElementById("cancel");
+let confirm = document.getElementById("confirm");
+let modal = document.getElementById("modal");
 let mensajeContainer = document.querySelector(".mensaje");
 
-formUpdate.addEventListener("submit", (e)=>{
-    e.preventDefault();
+let id = '';
 
-    let userData = new FormData(formUpdate);
+buttons.forEach(button => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+        id = button.getAttribute("href");
+        modal.style.display = "flex";
+    });
+});
 
-    fetch("addQuery.php", {
-        method: "POST",
-        body: userData
-    })
+modal.addEventListener('click', (e) => {
+    if(e.target.id === "modal"){
+        modal.style.display = "none";
+    }
+});
+
+cancel.addEventListener("click", (e) => {
+    modal.style.display = "none";
+});
+
+confirm.addEventListener("click", (e) => {
+    fetch(`delete.php?id=${id}`)
         .then(res => res.json())
         .then(data => {
             if(data.bool == false) {
@@ -18,7 +34,14 @@ formUpdate.addEventListener("submit", (e)=>{
                 mensajeOpen('mensaje-active-ok', data.value, data.bool);
             }
         })
-})
+});
+
+function openModal(event) {
+    profileModal.style.display = "flex";
+    setTimeout(()=>{
+        profileModalContent.style.width = "70%";
+    }, 1);
+}
 
 function mensajeOpen(status, value, bool) {
     mensajeContainer.classList.add(status);
@@ -34,7 +57,7 @@ function mensajeOpen(status, value, bool) {
             mensajeContainer.classList.remove("mensaje-active-ok");
         }, 2000);
         setTimeout(()=>{
-            window.location.replace("../roles");
+            window.location.replace("roles");
         },2050)
     }
 }

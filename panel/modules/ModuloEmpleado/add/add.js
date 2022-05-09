@@ -1,4 +1,4 @@
-let formUpdate = document.getElementById("addRole");
+let formUpdate = document.getElementById("updUserData");
 let mensajeContainer = document.querySelector(".mensaje");
 
 formUpdate.addEventListener("submit", (e)=>{
@@ -34,7 +34,7 @@ function mensajeOpen(status, value, bool) {
             mensajeContainer.classList.remove("mensaje-active-ok");
         }, 2000);
         setTimeout(()=>{
-            window.location.replace("../roles");
+            window.location.replace("../moduloEmpleado");
         },2050)
     }
 }

@@ -4,10 +4,14 @@
         header("Location: ../login/login.php");
     } else {
         require("../../../../db/dbConnection.php");
-        $query = $conexion->prepare("SELECT * FROM tblRol");
+        $query = $conexion->prepare("SELECT * FROM tblRol WHERE idRol = '$_GET[id]'");
         $query->setFetchMode(PDO::FETCH_ASSOC);
         $query->execute();
         $result = $query->fetch();
+
+        $query2 = $conexion->prepare("SELECT r.nombrerol, p.nombre FROM tblRol AS r INNER JOIN tblRolPrivilegio AS rp ON r.idRol = rp.idRol INNER JOIN tblPrivilegios AS p ON rp.idPrivilegio = p.idPrivilegio WHERE r.idRol = '$_GET[id]'");
+        $query2->setFetchMode(PDO::FETCH_ASSOC);
+        $query2->execute();
     }
 ?>
 
@@ -17,7 +21,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>view <?= $result['nomEmpleado'] ?></title>
+    <title>view </title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,7 +33,17 @@
                     <div class='dato'>
                         <p class='title'>Privilegios:</p>
                         <div class='text'>
-                            <p></p>
+                            <?php
+                                while($result2 = $query2->fetch()) {
+                                    ?>
+                                        <div class='roles'>
+                                            <div class='bot'>
+                                            </div>
+                                            <p><?= $result2['nombre'] ?></p>
+                                        </div>
+                                    <?php
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>

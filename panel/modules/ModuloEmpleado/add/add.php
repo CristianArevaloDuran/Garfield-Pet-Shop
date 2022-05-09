@@ -120,11 +120,12 @@
                         <input hidden required="false" type="text" name="imagen" id="imagen" value="1">
                     </div>
                 </div>
-                <input type="submit" value="Actualizar">
+                <input type="submit" value="Registrar">
             </form>
         </div>
     </div>
     <script src="reveal.js"></script>
     <script src="modal.js"></script>
+    <script src='add.js'></script>
 </body>
 </html>

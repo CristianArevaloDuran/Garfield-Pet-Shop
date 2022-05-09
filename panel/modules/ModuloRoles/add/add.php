@@ -51,13 +51,13 @@
 
                                     <div class="dropdown-content">
                                         <div class="content">
-                                            <input type="checkbox" class='base' hidden value='verCliente' name='checks[]'>
+                                            <input type="checkbox" class='base' hidden value='1' name='checks[]'>
                                             <div class='check-input'>
-                                                <input class='checkbox-input' type="checkbox" id='crearCliente' value='crearCliente' name='checks[]'>
+                                                <input class='checkbox-input' type="checkbox" id='crearCliente' value='2' name='checks[]'>
                                                 <label for="crearCliente">Crear cliente</label>
                                             </div>
                                             <div class='check-input'>
-                                                <input class='checkbox-input' type="checkbox" id='estadoCliente' value='estadoCliente' name='checks[]'>
+                                                <input class='checkbox-input' type="checkbox" id='estadoCliente' value='3' name='checks[]'>
                                                 <label for="estadoCliente">Cambiar estado cliente</label>
                                             </div>
                                         </div>
