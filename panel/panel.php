@@ -320,8 +320,8 @@
             let currentButton = document.querySelector('.button-active');
         
             if(currentActive && currentActive !== buttonContent) {
-                let currentDropdownContentBlock = document.querySelector('.     dropdown-active').nextElementSibling;
-                let currentAnchorDropdown = currentDropdownContentBlock.querySelectorAll        ('.content a');
+                let currentDropdownContentBlock = document.querySelector('.dropdown-active').nextElementSibling;
+                let currentAnchorDropdown = currentDropdownContentBlock.querySelectorAll('.content a');
                 currentActive.classList.toggle('dropdown-active');
                 currentButton.classList.toggle('button-active');
                 currentActive.nextElementSibling.style.maxHeight = 0;
@@ -330,7 +330,7 @@
                     currentAnchorDropdown[i].style.opacity = 0;
                 }
                 setTimeout(()=>{
-                    currentActive.nextElementSibling.classList.remove       ('dropdown-content-active');
+                    currentActive.nextElementSibling.classList.remove('dropdown-content-active');
                 },250)
             }
         
