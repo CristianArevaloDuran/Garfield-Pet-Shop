@@ -314,6 +314,7 @@
 .max-sidebar .sidebar-footer p {
     font-family: var(--fuente);
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1600px) {

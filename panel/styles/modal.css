@@ -88,3 +88,88 @@
 .profile-modal .modal-content .icon:hover > svg{
     transform: rotate(90deg);
 }
+
+/*Devs*/
+
+.devs-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 50;
+    background-color: var(--blur-color);
+    backdrop-filter: blur(3px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.devs-modal .devs-content {
+    min-width: 30%;
+    width: 30%;
+    max-width: 40%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-4);
+    transition: .25s ease;
+}
+
+.devs-modal .devs-content .devs-names {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-family: var(--fuente);
+}
+
+.devs-modal .devs-content .logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 50;
+}
+
+.devs-modal .devs-content .logo img {
+    width: 50px;
+    border-radius: 15px;
+}
+
+.devs-modal .devs-content .icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: var(--color-icon);
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 50;
+    border-radius: 10px;
+    transition: .25s ease;
+}
+
+.devs-modal .devs-content .icon:hover {
+    background-color: #ccc;
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px var(--color-1);
+}
+
+.devs-modal .devs-content .icon svg {
+    stroke: #111;
+    width: 30px;
+    transition: transform .25s ease;
+}
+
+.devs-modal .devs-content .icon:hover > svg{
+    transform: rotate(90deg);
+}

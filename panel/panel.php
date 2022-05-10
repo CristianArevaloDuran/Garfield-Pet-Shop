@@ -35,6 +35,34 @@
 </head>
 <body>
 
+    <!--Devs Modal-->
+
+    <div class="devs-modal" id="devsModal">
+        <div class="devs-content" id="devsModalContent">
+            <div class="logo">
+                <img draggable="false" src="../img/logo.jpg" alt="">
+            </div>
+            <div class="icon" id="devsModalClose">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+            </div>
+            <div class="devs-names">
+                <h1>Desarrolladores</h1>
+                <p>Xiomara Valentina Vargas García</p>
+                <p>Kevin Stiven Gamba Penagos</p>
+                <p>Juan Diego Castañeda Ulloa</p>
+                <p>Cristian Camilo Quevedo Rodriguez</p>
+                <p>Cristian Arévalo Duran</p>
+                <p>😎</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="devs-container">
+        
+    </div>
+
+    <!--Devs Modal-->
+
     <!--Profile modal...-->
 
     <div class="profile-modal" id="profileModal">
@@ -93,7 +121,7 @@
         </div>
 
         <div class="sidebar-footer">
-            <p>Desarrolladores</p>
+            <p id="devsModalButton1">Desarrolladores</p>
         </div>
     </div>
 
@@ -189,7 +217,7 @@
         </div>
 
         <div class="sidebar-footer">
-            <p>Desarrolladores</p>
+            <p id="devsModalButton2">Desarrolladores</p>
         </div>
     </div>
 
@@ -252,6 +280,7 @@
 
     <script src="scripts/expand.js"></script>
     <script src="scripts/expandSidebar.js"></script>
+    <script src="scripts/devs.js"></script>
     <script>
 
         const sidebarButton1 = document.getElementById('sidebarContent1');
