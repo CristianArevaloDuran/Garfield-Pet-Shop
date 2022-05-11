@@ -9,7 +9,7 @@ devsModalButton2.addEventListener("click", openModal);
 devsModalClose.addEventListener("click", closeModal);
 devsModal.addEventListener('click', (e)=>{
     if(e.target.classList.contains("devs-modal")) {
-        devsModalContent.style.width = "50%";   
+        devsModalContent.style.width = "30%";   
         setTimeout(()=>{
             devsModal.style.display = "none";
         }, 170);
@@ -19,12 +19,12 @@ devsModal.addEventListener('click', (e)=>{
 function openModal() {
     devsModal.style.display = "flex";
     setTimeout(()=>{
-        devsModalContent.style.width = "70%";
+        devsModalContent.style.width = "50%";
     }, 1);
 }
 
-function closeModal(e) {
-    devsModalContent.style.width = "50%";   
+function closeModal() {
+    devsModalContent.style.width = "30%";   
     setTimeout(()=>{
         devsModal.style.display = "none";
     }, 170);

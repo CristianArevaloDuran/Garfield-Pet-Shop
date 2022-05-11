@@ -1,3 +1,3 @@
 <?php
-    $conexion = new PDO("mysql:host=localhost;dbname=gps", "root", "");
+    $conexion = new PDO("mysql:host=localhost;dbname=gps", "root", "admin");
 ?>
