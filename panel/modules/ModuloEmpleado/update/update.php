@@ -112,7 +112,7 @@
                         </div>
                     </div>
                     <div class="input">
-                        <input hidden required="false" type="text" name="imagen" id="imagen" value="<?= $result["idImagen"] ?>">
+                        <input hidden required="false" type="text" name="imagen" id="imagen" value="<?= $result["imgEmpleado"] ?>">
                     </div>
                 </div>
                 <input type="submit" value="Actualizar">
