@@ -1,0 +1,90 @@
+@import url("../../styles/root.css");
+
+.profile-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 50;
+    background-color: var(--blur-color);
+    backdrop-filter: blur(3px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-modal .modal-content {
+    min-width: 50%;
+    width: 50%;
+    max-width: 80%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-4);
+    transition: .25s ease;
+}
+
+.profile-modal .modal-content .iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.profile-modal .modal-content .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-modal .modal-content .logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 50;
+}
+
+.profile-modal .modal-content .logo img {
+    width: 50px;
+    border-radius: 15px;
+}
+
+.profile-modal .modal-content .icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: var(--color-icon);
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 50;
+    border-radius: 10px;
+    transition: .25s ease;
+}
+
+.profile-modal .modal-content .icon:hover {
+    background-color: #ccc;
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px var(--color-1);
+}
+
+.profile-modal .modal-content .icon svg {
+    stroke: #111;
+    width: 30px;
+    transition: transform .25s ease;
+}
+
+.profile-modal .modal-content .icon:hover > svg{
+    transform: rotate(90deg);
+}

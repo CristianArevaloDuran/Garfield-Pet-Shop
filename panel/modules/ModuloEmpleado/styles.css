@@ -1,0 +1,186 @@
+@import url("../../../styles/root.css");
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-4);
+    position: relative;
+    overflow: hidden;
+}
+
+.icons {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 10px;
+    background-color: var(--color-1);
+    transition: .25s ease;
+}
+
+.icons .icon {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .25s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.icons .icon:hover {
+    background-color: var(--color-3);
+    transform:  scale(1.06);
+    box-shadow: 0 2px var(--color-icon);
+}
+
+.icons .icon svg {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons .rotated svg {
+    transform: rotate(45deg);
+}
+
+.icons .icon svg path {
+    width: 40px;
+    height: 40px;
+    fill: var(--color-icon);
+}
+
+.container .content {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.container .content .list::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--color-1);
+    border-radius: 20px;
+}
+
+.container .content .list::-webkit-scrollbar-thumb {
+    background-color: var(--color-4);
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+.container .content .title {
+    font-family: var(--fuente);
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container .content .list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 80%;
+    padding: 10px;
+}
+
+.container .content .list .list-item {
+    background-color: var(--color-2);
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    transition: .25s ease;
+}
+
+.container .content .list .list-item .data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.container .content .list .list-item .data h2 {
+    font-family: var(--fuente);
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.container .content .list .list-item .data p {
+    font-family: var(--fuente);
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.container .content .list .list-item .data img {
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-icon);
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0;
+    border: 8px solid var(--color-icon);
+    transition: .25s ease;
+}
+
+.container .content .list .list-item:hover {
+    background-color: var(--color-3);
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px var(--color-1);
+}
+
+.container .content .list .list-item:hover > .data img{
+    border: 0.1px solid var(--color-1);
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px var(--color-1);
+}
+
+.container .content .list .list-item:last-child {
+    margin-bottom: 0;
+}
+
+.container .content .list .list-item .actions {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .content .list .list-item .actions a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-icon);
+    text-decoration: none;
+    background-color: var(--color-1);
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: .25s ease;
+}
+
+.container .content .list .list-item .actions a:hover {
+    background-color: var(--color-5);
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px var(--color-1);
+}
+
+.container .content .list .list-item .actions a:last-child {
+    margin-right: 0;
+}

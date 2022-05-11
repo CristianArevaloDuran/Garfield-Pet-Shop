@@ -1,0 +1,24 @@
+@import url("../../../../styles/root.css");
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-4);
+    position: relative;
+}
+
+.container .content {
+    margin-top: 100px;
+    width: 80%;
+    display: flex;
+    height: calc(100% - 100px);
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .content iframe {
+    width: 100%;
+    height: 100%;
+}

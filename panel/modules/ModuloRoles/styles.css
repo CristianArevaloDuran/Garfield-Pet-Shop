@@ -1,0 +1,282 @@
+@import url("../../../styles/root.css");
+
+.mensaje {
+    position: absolute;
+    min-width: 300px;
+    top: -200px;
+    max-width: 500px;
+    background-color: var(--bad);
+    border-radius: 10px;
+    padding: 10px 20px;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    transition: .25s ease;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mensaje-active {
+    top: 0 !important;
+}
+
+.mensaje-active-ok {
+    top: 0 !important;
+    background-color: var(--correct);
+}
+
+.mensaje-active-ok .mensaje p {
+    color: #000;
+}
+
+.mensaje-active-bad {
+    top: 0 !important;
+    background-color: rgb(236, 33, 33);
+}
+
+.mensaje-active-bad p {
+    color: var(--color-icon) !important;
+}
+
+.mensaje p {
+    color: var(--color-icon);
+    font-family: var(--fuente);
+}
+
+.mensaje .icon {
+    background-color: #000;
+    width: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px;
+    transition: .25s ease;
+}
+
+.mensaje .icon:hover {
+    background-color: var(--color-1);
+    box-shadow: 2px 2px var(--color-4);
+    transform: translate(-2px, -2px);
+}
+
+.mensaje .icon:hover > svg {
+    transform: rotate(90deg);
+}
+
+.mensaje .icon svg {
+    width: 100%;
+    transition: .25s ease;
+    height: 100%;
+}
+
+.mensaje .icon svg path {
+    fill: var(--color-icon);
+}
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 50;
+    background-color: var(--blur-color);
+    backdrop-filter: blur(3px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-content {
+    min-width: 50%;
+    width: 50%;
+    max-width: 80%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-4);
+    transition: .25s ease;
+}
+
+.modal .modal-content {
+    font-family: var(--fuente);
+    font-size: 20px;
+    color: #000;
+}
+
+.modal .modal-content .buttons button {
+    font-family: var(--fuente);
+    font-size: 18px;
+    color: var(--color-icon);
+    background-color: var(--color-2);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: .25s ease;
+    outline: none;
+}
+
+.modal .modal-content .buttons button:hover {
+    background-color: var(--color-3);
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px var(--color-1);
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-4);
+    position: relative;
+    overflow: hidden;
+}
+
+.icons {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 10px;
+    background-color: var(--color-1);
+    transition: .25s ease;
+}
+
+.icons .icon {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .25s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.icons .icon:hover {
+    background-color: var(--color-3);
+    transform:  scale(1.06);
+    box-shadow: 0 2px var(--color-icon);
+}
+
+.icons .icon svg {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons .rotated svg {
+    transform: rotate(45deg);
+}
+
+.icons .icon svg path {
+    width: 40px;
+    height: 40px;
+    fill: var(--color-icon);
+}
+
+.container .content {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.container .content .list::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--color-1);
+    border-radius: 20px;
+}
+
+.container .content .list::-webkit-scrollbar-thumb {
+    background-color: var(--color-4);
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+.container .content .title {
+    font-family: var(--fuente);
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container .content .list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 80%;
+    padding: 10px;
+}
+
+.container .content .list .list-item {
+    background-color: var(--color-2);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    transition: .25s ease;
+}
+
+.container .content .list .list-item:hover {
+    background-color: var(--color-3);
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px var(--color-1);
+}
+
+.container .content .list .list-item:last-child {
+    margin-bottom: 0;
+}
+
+.container .content .list .list-item h2 {
+    font-family: var(--fuente);
+    font-size: 30px;
+}
+
+.container .content .list .list-item .actions {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .content .list .list-item .actions a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-icon);
+    text-decoration: none;
+    background-color: var(--color-1);
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: .25s ease;
+}
+
+.container .content .list .list-item .actions a:hover {
+    background-color: var(--color-5);
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px var(--color-1);
+}
+
+.container .content .list .list-item .actions a:last-child {
+    margin-right: 0;
+}
