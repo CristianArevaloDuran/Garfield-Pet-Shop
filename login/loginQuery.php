@@ -21,4 +21,5 @@
             echo json_encode(array("bool" => false, "value" => "Contraseña y/o identificación incorrecta"));
         }
     }
+    echo "hola";
 ?>
