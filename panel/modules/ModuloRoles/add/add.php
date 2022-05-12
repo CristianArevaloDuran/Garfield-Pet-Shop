@@ -86,11 +86,11 @@
                                             <input type="checkbox" class='base' hidden value='verCliente' >
                                             <div class='check-input'>
                                                 <input class='checkbox-input' type="checkbox" id='crearCliente' value='crearCliente'>
-                                                <label for="crearCliente">Crear cliente</label>
+                                                <label for="crearCliente">Crear Servicio</label>
                                             </div>
                                             <div class='check-input'>
                                                 <input class='checkbox-input' type="checkbox" id='estadoCliente' value='estadoCliente'>
-                                                <label for="estadoCliente">Cambiar estado cliente</label>
+                                                <label for="estadoCliente">Cambiar estado Servicio</label>
                                             </div>
                                         </div>
                                     </div>
