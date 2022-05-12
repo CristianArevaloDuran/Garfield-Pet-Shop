@@ -60,6 +60,14 @@
                                                 <input class='checkbox-input' type="checkbox" id='estadoCliente' value='3' name='checks[]'>
                                                 <label for="estadoCliente">Cambiar estado cliente</label>
                                             </div>
+                                            <div class='check-input'>
+                                                <input class='checkbox-input' type="checkbox" id='crearMascota' value='crearMascota'>
+                                                <label for="crearMascota">Crear Mascota</label>
+                                            </div>
+                                            <div class='check-input'>
+                                                <input class='checkbox-input' type="checkbox" id='estadoMascota' value='estadoMascota'>
+                                                <label for="estadoMascota">Cambiar estado mascota</label>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -104,6 +112,7 @@
                                                 <input class='checkbox-input' type="checkbox" id='crearCliente' value='crearCliente'>
                                                 <label for="crearCliente">Crear cliente</label>
                                             </div>
+
                                             <div class='check-input'>
                                                 <input class='checkbox-input' type="checkbox" id='estadoCliente' value='estadoCliente'>
                                                 <label for="estadoCliente">Cambiar estado cliente</label>
