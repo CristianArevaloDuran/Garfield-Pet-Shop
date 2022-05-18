@@ -119,7 +119,6 @@
             </form>
         </div>
     </div>
-    <script src="reveal.js"></script>
     <script src="update.js"></script>
     <script src="modal.js"></script>
 </body>
