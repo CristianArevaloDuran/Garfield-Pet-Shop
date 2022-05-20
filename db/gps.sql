@@ -41,7 +41,7 @@ CREATE TABLE `tblempleados` (
   `rolEmpleado` int UNSIGNED NOT NULL,
   `estEmpleado` int UNSIGNED NOT NULL,
   `conEmpleado` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblempleados`
@@ -63,7 +63,7 @@ INSERT INTO `tblempleados` (`idEmpleado`, `imgEmpleado`, `nomEmpleado`, `apeEmpl
 CREATE TABLE `tblestado` (
   `idEstado` int UNSIGNED NOT NULL,
   `nomEstado` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblestado`
@@ -82,7 +82,7 @@ INSERT INTO `tblestado` (`idEstado`, `nomEstado`) VALUES
 CREATE TABLE `tblimgempleados` (
   `idImagen` int UNSIGNED NOT NULL,
   `imagen` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblimgempleados`
@@ -107,7 +107,7 @@ CREATE TABLE `tblprivilegios` (
   `idPrivilegio` int UNSIGNED NOT NULL,
   `privilegio` varchar(50) NOT NULL,
   `nombre` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblprivilegios`
@@ -127,7 +127,7 @@ INSERT INTO `tblprivilegios` (`idPrivilegio`, `privilegio`, `nombre`) VALUES
 CREATE TABLE `tblrol` (
   `idRol` int UNSIGNED NOT NULL,
   `nombreRol` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblrol`
@@ -146,7 +146,7 @@ INSERT INTO `tblrol` (`idRol`, `nombreRol`) VALUES
 CREATE TABLE `tblrolprivilegio` (
   `idRol` int UNSIGNED NOT NULL,
   `idPrivilegio` int UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblrolprivilegio`
