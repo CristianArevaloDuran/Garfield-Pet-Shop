@@ -15,6 +15,8 @@
         $query2-> setFetchMode(PDO::FETCH_ASSOC);
         $query2->execute();
         $result2 = $query2->fetchAll();
+
+        $_SESSION["privilegios"] = $result2;
     }
 ?>
 
@@ -201,7 +203,6 @@
                 <div class="content">
                     <a href="modules/ModuloEmpleado/moduloEmpleado"  target="contenido" onclick="sidebarToggle()">Lista de empleados</a>
                     <a href="modules/ModuloRoles/roles" target="contenido" onclick="sidebarToggle()">Lista de roles</a>
-                    <a href="modules/imgModule/imgInsert" target="contenido" onclick="sidebarToggle()">Lista de imagenes</a>
                 </div>
             </div>
 
