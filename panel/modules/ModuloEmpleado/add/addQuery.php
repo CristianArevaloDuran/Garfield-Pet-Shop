@@ -18,16 +18,21 @@
 
     if($nombres == "" || $apellidos == "" || $email == "" || $telefono == "" || $direccion == "" || $fechaNac == "" || $password == "") {
         echo json_encode(array("bool" => false, "value" => "Rellene todos los campos"));
-    } else {
-        $password = password_hash($password, PASSWORD_BCRYPT);
-        $query = $conexion->prepare("INSERT INTO tblEmpleados VALUES ('$id', '$imgId', '$nombres', '$apellidos', '$email', '$telefono', '$direccion', '$fechaNac', '$date', null, '$rol', 1, '$password')");
-        $query->setFetchMode(PDO::FETCH_ASSOC);
-        $result = $query->execute();
-        if($result) {
-            echo json_encode(array("bool" => true, "value" => "Empleado registrado"));
+    }else {
+        $query = $conexion->prepare("SELECT * FROM tblEmpleados WHERE idEmpleado = '$id'");
+        $query->execute();
+        if($query->rowCount() > 0) {
+            echo json_encode(array("bool" => false, "value" => 'El empleado ya existe'));
         } else {
-            echo json_encode(array("bool" => false, "value" => "Error al registrar, vuelva a intentar"));
+            $password = password_hash($password, PASSWORD_BCRYPT);
+            $query = $conexion->prepare("INSERT INTO tblEmpleados VALUES ('$id', '$imgId', '$nombres', '$apellidos', '$email', '$telefono', '$direccion', '$fechaNac', '$date', null, '$rol', 1, '$password')");
+            $query->setFetchMode(PDO::FETCH_ASSOC);
+            $result = $query->execute();
+            if($result) {
+                echo json_encode(array("bool" => true, "value" => "Empleado registrado"));
+            } else {
+                echo json_encode(array("bool" => false, "value" => "Error al registrar, vuelva a intentar"));
+            }
         }
-        
     }
 ?>
