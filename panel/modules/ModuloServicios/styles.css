@@ -152,7 +152,3 @@
 .container .content .list .list-item .actions a:last-child {
     margin-right: 0;
 }
-
-.container .content .list .list-item .actions a:last-child > svg {
-    transform: rotate(45deg);
-}

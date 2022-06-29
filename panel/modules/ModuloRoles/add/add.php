@@ -75,14 +75,14 @@
 
                                     <div class="dropdown-content">
                                         <div class="content">
-                                            <input type="checkbox" class='base' hidden value='verCliente' >
+                                            <input type="checkbox" class='base' hidden value='21' name='checks[]'>
                                             <div class='check-input'>
                                                 <input class='checkbox-input' type="checkbox" id='crearCliente' value='crearCliente'>
-                                                <label for="crearCliente">Crear cliente</label>
+                                                <label for="crearCliente">Crear servicios</label>
                                             </div>
                                             <div class='check-input'>
-                                                <input class='checkbox-input' type="checkbox" id='estadoCliente' value='estadoCliente'>
-                                                <label for="estadoCliente">Cambiar estado cliente</label>
+                                                <input class='checkbox-input' type="checkbox" id='estadoCliente' value='editarServicios'>
+                                                <label for="editarServicios">Editar servicios</label>
                                             </div>
                                         </div>
                                     </div>

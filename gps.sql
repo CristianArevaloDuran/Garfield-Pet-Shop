@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 13, 2022 at 06:26 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.1
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 29-06-2022 a las 05:28:38
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `gps`
+-- Base de datos: `gps`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblempleados`
+-- Estructura de tabla para la tabla `tblempleados`
 --
 
 CREATE TABLE `tblempleados` (
@@ -44,18 +44,16 @@ CREATE TABLE `tblempleados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tblempleados`
+-- Volcado de datos para la tabla `tblempleados`
 --
 
 INSERT INTO `tblempleados` (`idEmpleado`, `imgEmpleado`, `nomEmpleado`, `apeEmpleado`, `corEmpleado`, `telEmpleado`, `dirEmpleado`, `fecNacimiento`, `fecIngreso`, `fecSalida`, `rolEmpleado`, `estEmpleado`, `conEmpleado`) VALUES
-(1069712878, 4, 'Cristian', 'Arévalo', 'cristianarevaloduran@gmail.com', 3123028695, 'Carrera 7 #14-17', '2003-11-30', '2022-03-08 22:23:56', NULL, 1, 1, '$2y$10$C1jPUy3EQXs2LW03VNNVaeLKtbLj2coxNN5rOQUeOtVXRHgEhPtFO'),
-(1234712878, 3, 'Juan', 'Mora', 'juan@gmail.com', 4294967295, 'Cra 7 N°14-17', '2003-06-04', '2022-03-13 00:13:02', NULL, 1, 1, '$2y$10$BzQr/85h6i/g9XNf7N3Vpu0.3mVpHGDRV8k2YvLvBsbwNYmpG4/Hm'),
-(1239712878, 2, 'Pepito', 'Alvarez', 'pepito@gmail.com', 3124741352, 'Cra 7 N°14-17', '2003-11-06', '2022-03-13 00:11:48', NULL, 1, 1, '$2y$10$vtUrTAjhM/fqfVfVBHuFbOwoL/zrEpNK6kLPpyt6N4kOxjxyYFQaO');
+(123, 1, 'Cristian', 'Arévalo', 'cristianarevaloduran@gmail.com', 4294967295, 'Carrera 7 #14-17', '3333-03-31', '2009-05-22 08:31:46', NULL, 1, 1, '$2y$10$0CpvWcpKS5.XxWp5jDubRuaFyahvK3Yc3ctOe7oK.Wa/.uavD7VoC');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblestado`
+-- Estructura de tabla para la tabla `tblestado`
 --
 
 CREATE TABLE `tblestado` (
@@ -64,7 +62,7 @@ CREATE TABLE `tblestado` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tblestado`
+-- Volcado de datos para la tabla `tblestado`
 --
 
 INSERT INTO `tblestado` (`idEstado`, `nomEstado`) VALUES
@@ -73,7 +71,7 @@ INSERT INTO `tblestado` (`idEstado`, `nomEstado`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblimgempleados`
+-- Estructura de tabla para la tabla `tblimgempleados`
 --
 
 CREATE TABLE `tblimgempleados` (
@@ -82,7 +80,7 @@ CREATE TABLE `tblimgempleados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tblimgempleados`
+-- Volcado de datos para la tabla `tblimgempleados`
 --
 
 INSERT INTO `tblimgempleados` (`idImagen`, `imagen`) VALUES
@@ -97,18 +95,36 @@ INSERT INTO `tblimgempleados` (`idImagen`, `imagen`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblprivilegios`
+-- Estructura de tabla para la tabla `tblprivilegios`
 --
 
 CREATE TABLE `tblprivilegios` (
   `idPrivilegio` int(10) UNSIGNED NOT NULL,
-  `privilegio` varchar(50) NOT NULL
+  `privilegio` varchar(50) NOT NULL,
+  `nombre` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tblprivilegios`
+--
+
+INSERT INTO `tblprivilegios` (`idPrivilegio`, `privilegio`, `nombre`) VALUES
+(1, 'verCliente', 'Ver cliente'),
+(2, 'crearCliente', 'Crear cliente'),
+(3, 'estadoCliente', 'Estado cliente'),
+(14, 'verEmpleado', 'Ver empleado'),
+(15, 'editarEmpleado', 'Editar empleado'),
+(16, 'crearEmpleado', 'Crear empleado'),
+(17, 'verRoles', 'Ver roles'),
+(18, 'crearRoles', 'Crear roles'),
+(19, 'editarRoles', 'Editar roles'),
+(20, 'borrarRol', 'Borrar roles'),
+(21, 'verServicios', 'Ver servicios');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrol`
+-- Estructura de tabla para la tabla `tblrol`
 --
 
 CREATE TABLE `tblrol` (
@@ -117,7 +133,7 @@ CREATE TABLE `tblrol` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tblrol`
+-- Volcado de datos para la tabla `tblrol`
 --
 
 INSERT INTO `tblrol` (`idRol`, `nombreRol`) VALUES
@@ -126,7 +142,7 @@ INSERT INTO `tblrol` (`idRol`, `nombreRol`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrolprivilegio`
+-- Estructura de tabla para la tabla `tblrolprivilegio`
 --
 
 CREATE TABLE `tblrolprivilegio` (
@@ -135,11 +151,48 @@ CREATE TABLE `tblrolprivilegio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Volcado de datos para la tabla `tblrolprivilegio`
+--
+
+INSERT INTO `tblrolprivilegio` (`idRol`, `idPrivilegio`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 14),
+(1, 15),
+(1, 16),
+(1, 17),
+(1, 18),
+(1, 19),
+(1, 20),
+(1, 21);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tblservicios`
+--
+
+CREATE TABLE `tblservicios` (
+  `idServicio` int(11) NOT NULL,
+  `nombreServicio` varchar(50) NOT NULL,
+  `descripcionServicio` text NOT NULL,
+  `valorServicio` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tblservicios`
+--
+
+INSERT INTO `tblservicios` (`idServicio`, `nombreServicio`, `descripcionServicio`, `valorServicio`) VALUES
+(1, 'Baño', 'Asd', '40000');
+
+--
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `tblempleados`
+-- Indices de la tabla `tblempleados`
 --
 ALTER TABLE `tblempleados`
   ADD PRIMARY KEY (`idEmpleado`),
@@ -148,71 +201,83 @@ ALTER TABLE `tblempleados`
   ADD KEY `FK_estadoEmpleado` (`estEmpleado`);
 
 --
--- Indexes for table `tblestado`
+-- Indices de la tabla `tblestado`
 --
 ALTER TABLE `tblestado`
   ADD PRIMARY KEY (`idEstado`);
 
 --
--- Indexes for table `tblimgempleados`
+-- Indices de la tabla `tblimgempleados`
 --
 ALTER TABLE `tblimgempleados`
   ADD PRIMARY KEY (`idImagen`);
 
 --
--- Indexes for table `tblprivilegios`
+-- Indices de la tabla `tblprivilegios`
 --
 ALTER TABLE `tblprivilegios`
   ADD PRIMARY KEY (`idPrivilegio`);
 
 --
--- Indexes for table `tblrol`
+-- Indices de la tabla `tblrol`
 --
 ALTER TABLE `tblrol`
   ADD PRIMARY KEY (`idRol`),
   ADD UNIQUE KEY `nombreRol` (`nombreRol`);
 
 --
--- Indexes for table `tblrolprivilegio`
+-- Indices de la tabla `tblrolprivilegio`
 --
 ALTER TABLE `tblrolprivilegio`
   ADD PRIMARY KEY (`idRol`,`idPrivilegio`),
   ADD KEY `FK_rolPrivilegioPrivilegio` (`idPrivilegio`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indices de la tabla `tblservicios`
+--
+ALTER TABLE `tblservicios`
+  ADD PRIMARY KEY (`idServicio`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `tblestado`
+-- AUTO_INCREMENT de la tabla `tblestado`
 --
 ALTER TABLE `tblestado`
   MODIFY `idEstado` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblimgempleados`
+-- AUTO_INCREMENT de la tabla `tblimgempleados`
 --
 ALTER TABLE `tblimgempleados`
   MODIFY `idImagen` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `tblprivilegios`
+-- AUTO_INCREMENT de la tabla `tblprivilegios`
 --
 ALTER TABLE `tblprivilegios`
-  MODIFY `idPrivilegio` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `idPrivilegio` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `tblrol`
+-- AUTO_INCREMENT de la tabla `tblrol`
 --
 ALTER TABLE `tblrol`
-  MODIFY `idRol` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idRol` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT de la tabla `tblservicios`
+--
+ALTER TABLE `tblservicios`
+  MODIFY `idServicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `tblempleados`
+-- Filtros para la tabla `tblempleados`
 --
 ALTER TABLE `tblempleados`
   ADD CONSTRAINT `FK_estadoEmpleado` FOREIGN KEY (`estEmpleado`) REFERENCES `tblestado` (`idEstado`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -220,7 +285,7 @@ ALTER TABLE `tblempleados`
   ADD CONSTRAINT `FK_rolEmpleado` FOREIGN KEY (`rolEmpleado`) REFERENCES `tblrol` (`idRol`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tblrolprivilegio`
+-- Filtros para la tabla `tblrolprivilegio`
 --
 ALTER TABLE `tblrolprivilegio`
   ADD CONSTRAINT `FK_rolPrivilegioPrivilegio` FOREIGN KEY (`idPrivilegio`) REFERENCES `tblprivilegios` (`idPrivilegio`) ON DELETE CASCADE ON UPDATE CASCADE,
