@@ -83,11 +83,11 @@
                                         <div class="content">
                                             <input type="checkbox" class='base' hidden value='21' name='checks[]'>
                                             <div class='check-input'>
-                                                <input class='checkbox-input' type="checkbox" id='crearCliente' value='crearCliente'>
-                                                <label for="crearCliente">Crear servicios</label>
+                                                <input class='checkbox-input' type="checkbox" id='crearServicios' value='22' name='checks[]'>
+                                                <label for="crearServicios">Crear servicios</label>
                                             </div>
                                             <div class='check-input'>
-                                                <input class='checkbox-input' type="checkbox" id='estadoCliente' value='editarServicios'>
+                                                <input class='checkbox-input' type="checkbox" id='editarServicios' value='23' name='checks[]'>
                                                 <label for="editarServicios">Editar servicios</label>
                                             </div>
                                         </div>

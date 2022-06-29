@@ -42,7 +42,7 @@
 
             <?php 
                 foreach ($_SESSION['privilegios'] as $row) {
-                    if($row['privilegio'] === 'editarEmpleado') {
+                    if($row['privilegio'] === 'editarServicios') {
             ?>
 
                 <div class='buttons'>

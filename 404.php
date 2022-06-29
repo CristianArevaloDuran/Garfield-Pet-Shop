@@ -28,6 +28,7 @@
     <script>
         function redirect() {
             window.top.location.replace("./panel/panel");
+            
         }
     </script>
 </body>

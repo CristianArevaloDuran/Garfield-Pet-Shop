@@ -310,6 +310,11 @@
     padding: 20px;
 }
 
+.container .data h1 {
+    font-family: var(--fuente);
+    font-size: 30px;
+}
+
 .container .data::-webkit-scrollbar {
     width: 8px;
 }
@@ -345,12 +350,11 @@
 }
 
 .container .data form .inputs{
-    display: grid;
+    display: flex;
     width: 100%;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px 15px;
     justify-content: center;
 }
 
@@ -422,6 +426,7 @@
 .container .data form .inputs .input label {
     font-family: var(--fuente);
     font-size: 20px;
+    margin: 0 10px 5px 10px;
     margin-bottom: 5px;
 }
 
@@ -434,9 +439,31 @@
     font-family: var(--fuente);
     font-size: 18px;
     transition: .25s ease;
+    margin: 0 10px;
+}
+
+.container .data  form .inputs .input textarea {
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 10px;
+    min-height: 70px;
+    height: 70px;
+    min-width: 250px;
+    max-height: 150px;
+    width: 250px;
+    max-width: 350px;
+    border: none;
+    font-family: var(--fuente);
+    font-size: 18px;
+    transition: .25s ease;
+    margin: 0 10px;
 }
 
 .container .data form .inputs .input input:focus {
+    outline: 4px solid var(--color-1);
+}
+
+.container .data form .inputs .input textarea:focus {
     outline: 4px solid var(--color-1);
 }
 
