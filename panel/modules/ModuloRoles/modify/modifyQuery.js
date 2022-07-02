@@ -34,7 +34,7 @@ function mensajeOpen(status, value, bool) {
             mensajeContainer.classList.remove("mensaje-active-ok");
         }, 2000);
         setTimeout(()=>{
-            window.location.replace("../roles");
+            window.top.location.replace("../../../panel");
         },2050)
     }
 }

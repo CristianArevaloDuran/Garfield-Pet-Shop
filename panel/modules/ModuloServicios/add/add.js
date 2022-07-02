@@ -6,7 +6,7 @@ formUpdate.addEventListener("submit", (e)=>{
 
     let userData = new FormData(formUpdate);
 
-    fetch("updateQuery.php", {
+    fetch("addQuery.php", {
         method: "POST",
         body: userData
     })
@@ -34,7 +34,7 @@ function mensajeOpen(status, value, bool) {
             mensajeContainer.classList.remove("mensaje-active-ok");
         }, 2000);
         setTimeout(()=>{
-            window.location.replace("../moduloEmpleado");
+            window.location.replace("../servicios.php");
         },2050)
     }
 }

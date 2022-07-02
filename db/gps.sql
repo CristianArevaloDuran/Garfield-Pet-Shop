@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-06-2022 a las 05:28:38
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.1
+-- Tiempo de generación: 20-05-2022 a las 16:40:04
+-- Versión del servidor: 8.0.22
+-- Versión de PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,27 +28,31 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tblempleados` (
-  `idEmpleado` int(10) UNSIGNED NOT NULL,
-  `imgEmpleado` int(10) UNSIGNED NOT NULL,
+  `idEmpleado` int UNSIGNED NOT NULL,
+  `imgEmpleado` int UNSIGNED NOT NULL,
   `nomEmpleado` varchar(25) NOT NULL,
   `apeEmpleado` varchar(25) NOT NULL,
   `corEmpleado` varchar(50) NOT NULL,
-  `telEmpleado` int(10) UNSIGNED NOT NULL,
+  `telEmpleado` int UNSIGNED NOT NULL,
   `dirEmpleado` varchar(100) NOT NULL,
   `fecNacimiento` date NOT NULL,
   `fecIngreso` datetime NOT NULL,
   `fecSalida` datetime DEFAULT NULL,
-  `rolEmpleado` int(10) UNSIGNED NOT NULL,
-  `estEmpleado` int(10) UNSIGNED NOT NULL,
+  `rolEmpleado` int UNSIGNED NOT NULL,
+  `estEmpleado` int UNSIGNED NOT NULL,
   `conEmpleado` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblempleados`
 --
 
 INSERT INTO `tblempleados` (`idEmpleado`, `imgEmpleado`, `nomEmpleado`, `apeEmpleado`, `corEmpleado`, `telEmpleado`, `dirEmpleado`, `fecNacimiento`, `fecIngreso`, `fecSalida`, `rolEmpleado`, `estEmpleado`, `conEmpleado`) VALUES
-(123, 1, 'Cristian', 'Arévalo', 'cristianarevaloduran@gmail.com', 4294967295, 'Carrera 7 #14-17', '3333-03-31', '2009-05-22 08:31:46', NULL, 1, 1, '$2y$10$0CpvWcpKS5.XxWp5jDubRuaFyahvK3Yc3ctOe7oK.Wa/.uavD7VoC');
+(123, 3, 'Cristian', 'Arévalo Duran', 'cristianarevaloduran@gmail.com', 3123028695, 'Cra 7 N°14-17', '2003-12-19', '2022-03-17 07:12:09', NULL, 1, 1, '$2y$10$DSfkU/0.dMgD5ed.7XEjXe4tnEdzBGc.Qqso9P6cBrmqjIcBE7IhG'),
+(1234, 1, 'juan', 'sdaasd', 'juadcastaeda111@misena.edu.co', 3023843675, 'carrera14A#16C30', '1232-03-12', '2009-05-22 10:49:39', NULL, 14, 1, '$2y$10$MxJ5DAQTPMB2F8BC4qw7xOFJ7xgbixSXi2FtCh69HHix0M19BB3b.'),
+(1069712878, 4, 'Cristian', 'Arévalo', 'cristianarevaloduran@gmail.com', 3123028695, 'Carrera 7 #14-17', '2003-11-30', '2022-03-08 22:23:56', NULL, 1, 1, '$2y$10$Pgi.czXk2b9wTBd7VyTrU.tT9Y4ihZTOdDh9fLezpGrDkjxeTvZUO'),
+(1234712878, 3, 'Juan', 'Mora', 'juan@gmail.com', 4294967295, 'Cra 7 N°14-17', '2003-06-04', '2022-03-13 00:13:02', NULL, 1, 1, '$2y$10$s1ia.wuyhH4iRTQ9B.yxOO0husu8mEuwDWirSNPZhhpR5DqUOzCB6'),
+(1239712878, 2, 'Pepito', 'Alvarez', 'pepito@gmail.com', 3124741352, 'Cra 7 N°14-17', '2003-11-06', '2022-03-13 00:11:48', NULL, 1, 1, '$2y$10$vtUrTAjhM/fqfVfVBHuFbOwoL/zrEpNK6kLPpyt6N4kOxjxyYFQaO');
 
 -- --------------------------------------------------------
 
@@ -57,16 +61,17 @@ INSERT INTO `tblempleados` (`idEmpleado`, `imgEmpleado`, `nomEmpleado`, `apeEmpl
 --
 
 CREATE TABLE `tblestado` (
-  `idEstado` int(10) UNSIGNED NOT NULL,
+  `idEstado` int UNSIGNED NOT NULL,
   `nomEstado` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblestado`
 --
 
 INSERT INTO `tblestado` (`idEstado`, `nomEstado`) VALUES
-(1, 'Activo');
+(1, 'Activo'),
+(2, 'Inactivo');
 
 -- --------------------------------------------------------
 
@@ -75,9 +80,9 @@ INSERT INTO `tblestado` (`idEstado`, `nomEstado`) VALUES
 --
 
 CREATE TABLE `tblimgempleados` (
-  `idImagen` int(10) UNSIGNED NOT NULL,
+  `idImagen` int UNSIGNED NOT NULL,
   `imagen` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblimgempleados`
@@ -99,10 +104,10 @@ INSERT INTO `tblimgempleados` (`idImagen`, `imagen`) VALUES
 --
 
 CREATE TABLE `tblprivilegios` (
-  `idPrivilegio` int(10) UNSIGNED NOT NULL,
+  `idPrivilegio` int UNSIGNED NOT NULL,
   `privilegio` varchar(50) NOT NULL,
   `nombre` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblprivilegios`
@@ -111,15 +116,7 @@ CREATE TABLE `tblprivilegios` (
 INSERT INTO `tblprivilegios` (`idPrivilegio`, `privilegio`, `nombre`) VALUES
 (1, 'verCliente', 'Ver cliente'),
 (2, 'crearCliente', 'Crear cliente'),
-(3, 'estadoCliente', 'Estado cliente'),
-(14, 'verEmpleado', 'Ver empleado'),
-(15, 'editarEmpleado', 'Editar empleado'),
-(16, 'crearEmpleado', 'Crear empleado'),
-(17, 'verRoles', 'Ver roles'),
-(18, 'crearRoles', 'Crear roles'),
-(19, 'editarRoles', 'Editar roles'),
-(20, 'borrarRol', 'Borrar roles'),
-(21, 'verServicios', 'Ver servicios');
+(3, 'editarCliente', 'Editar cliente');
 
 -- --------------------------------------------------------
 
@@ -128,16 +125,17 @@ INSERT INTO `tblprivilegios` (`idPrivilegio`, `privilegio`, `nombre`) VALUES
 --
 
 CREATE TABLE `tblrol` (
-  `idRol` int(10) UNSIGNED NOT NULL,
+  `idRol` int UNSIGNED NOT NULL,
   `nombreRol` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblrol`
 --
 
 INSERT INTO `tblrol` (`idRol`, `nombreRol`) VALUES
-(1, 'Administrador');
+(1, 'Administrador'),
+(14, 'asdasd');
 
 -- --------------------------------------------------------
 
@@ -146,9 +144,9 @@ INSERT INTO `tblrol` (`idRol`, `nombreRol`) VALUES
 --
 
 CREATE TABLE `tblrolprivilegio` (
-  `idRol` int(10) UNSIGNED NOT NULL,
-  `idPrivilegio` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `idRol` int UNSIGNED NOT NULL,
+  `idPrivilegio` int UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tblrolprivilegio`
@@ -156,36 +154,10 @@ CREATE TABLE `tblrolprivilegio` (
 
 INSERT INTO `tblrolprivilegio` (`idRol`, `idPrivilegio`) VALUES
 (1, 1),
+(14, 1),
 (1, 2),
 (1, 3),
-(1, 14),
-(1, 15),
-(1, 16),
-(1, 17),
-(1, 18),
-(1, 19),
-(1, 20),
-(1, 21);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tblservicios`
---
-
-CREATE TABLE `tblservicios` (
-  `idServicio` int(11) NOT NULL,
-  `nombreServicio` varchar(50) NOT NULL,
-  `descripcionServicio` text NOT NULL,
-  `valorServicio` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tblservicios`
---
-
-INSERT INTO `tblservicios` (`idServicio`, `nombreServicio`, `descripcionServicio`, `valorServicio`) VALUES
-(1, 'Baño', 'Asd', '40000');
+(14, 3);
 
 --
 -- Índices para tablas volcadas
@@ -233,12 +205,6 @@ ALTER TABLE `tblrolprivilegio`
   ADD KEY `FK_rolPrivilegioPrivilegio` (`idPrivilegio`);
 
 --
--- Indices de la tabla `tblservicios`
---
-ALTER TABLE `tblservicios`
-  ADD PRIMARY KEY (`idServicio`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -246,31 +212,25 @@ ALTER TABLE `tblservicios`
 -- AUTO_INCREMENT de la tabla `tblestado`
 --
 ALTER TABLE `tblestado`
-  MODIFY `idEstado` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idEstado` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tblimgempleados`
 --
 ALTER TABLE `tblimgempleados`
-  MODIFY `idImagen` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idImagen` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tblprivilegios`
 --
 ALTER TABLE `tblprivilegios`
-  MODIFY `idPrivilegio` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `idPrivilegio` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `tblrol`
 --
 ALTER TABLE `tblrol`
-  MODIFY `idRol` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
---
--- AUTO_INCREMENT de la tabla `tblservicios`
---
-ALTER TABLE `tblservicios`
-  MODIFY `idServicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idRol` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas

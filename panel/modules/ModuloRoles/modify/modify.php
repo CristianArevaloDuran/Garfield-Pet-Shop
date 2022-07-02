@@ -81,14 +81,14 @@
 
                                     <div class="dropdown-content">
                                         <div class="content">
-                                            <input type="checkbox" class='base' hidden value='verCliente' >
+                                            <input type="checkbox" class='base' hidden value='21' name='checks[]'>
                                             <div class='check-input'>
-                                                <input class='checkbox-input' type="checkbox" id='crearCliente' value='crearCliente'>
-                                                <label for="crearCliente">Crear cliente</label>
+                                                <input class='checkbox-input' type="checkbox" id='crearServicios' value='22' name='checks[]'>
+                                                <label for="crearServicios">Crear servicios</label>
                                             </div>
                                             <div class='check-input'>
-                                                <input class='checkbox-input' type="checkbox" id='estadoCliente' value='estadoCliente'>
-                                                <label for="estadoCliente">Cambiar estado cliente</label>
+                                                <input class='checkbox-input' type="checkbox" id='editarServicios' value='23' name='checks[]'>
+                                                <label for="editarServicios">Editar servicios</label>
                                             </div>
                                         </div>
                                     </div>
@@ -105,14 +105,30 @@
 
                                     <div class="dropdown-content">
                                         <div class="content">
-                                            <input type="checkbox" class='base' hidden value='verCliente' >
+                                            <input type="checkbox" class='base' hidden value='14' name='checks[]'>
                                             <div class='check-input'>
-                                                <input class='checkbox-input' type="checkbox" id='crearCliente' value='crearCliente'>
-                                                <label for="crearCliente">Crear cliente</label>
+                                                <input class='checkbox-input' type="checkbox" id='crearEmpleado' value='16' name='checks[]'>
+                                                <label for="crearEmpleado">Crear empleado</label>
                                             </div>
                                             <div class='check-input'>
-                                                <input class='checkbox-input' type="checkbox" id='estadoCliente' value='estadoCliente'>
-                                                <label for="estadoCliente">Cambiar estado cliente</label>
+                                                <input class='checkbox-input' type="checkbox" id='editarEmpleado' value='15' name='checks[]'>
+                                                <label for="editarEmpleado">Editar empleado</label>
+                                            </div>
+                                            <div class='check-input'>
+                                                <input class='checkbox-input' type="checkbox" id='verRoles' value='17' name='checks[]'>
+                                                <label for="verRoles">Ver roles</label>
+                                            </div>
+                                            <div class='check-input'>
+                                                <input class='checkbox-input' type="checkbox" id='crearRoles' value='18' name='checks[]'>
+                                                <label for="crearRoles">Crear roles</label>
+                                            </div>
+                                            <div class='check-input'>
+                                                <input class='checkbox-input' type="checkbox" id='editarRoles' value='19' name='checks[]'>
+                                                <label for="editarRoles">Editar roles</label>
+                                            </div>
+                                            <div class='check-input'>
+                                                <input class='checkbox-input' type="checkbox" id='borrarRol' value='20' name='checks[]'>
+                                                <label for="borrarRol">Borrar roles</label>
                                             </div>
                                         </div>
                                     </div>
